@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 720pt;
+      height: 405pt;
+      font-family: 'Pretendard', sans-serif;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .cmd-block {
+      border: 2pt solid #000;
+      box-shadow: 3pt 3pt 0 #000;
+      background: #1a1a1a;
+      padding: 10pt 14pt;
+      display: flex;
+      align-items: center;
+      gap: 10pt;
+    }
+    .card {
+      border: 3pt solid #000;
+      box-shadow: 5pt 5pt 0 #000;
+    }
+  </style>
+</head>
+<body>
+  <!-- 헤더 -->
+  <div style="background: #000; padding: 8pt 40pt; display: flex; justify-content: space-between; align-items: center;">
+    <div style="display: flex; align-items: center; gap: 12pt;">
+      <div style="background: #FF2D55; padding: 3pt 10pt;">
+        <p style="font-family: 'Courier New', monospace; font-size: 8pt; font-weight: 700; color: #fff;">DIFF 02</p>
+      </div>
+      <p style="font-family: 'Courier New', monospace; font-size: 9pt; color: #fff;">명령어를 직접 실행한다</p>
+    </div>
+    <p style="font-family: 'Courier New', monospace; font-size: 9pt; color: #555;">05 / 09</p>
+  </div>
+
+  <div style="flex: 1; padding: 24pt 40pt 20pt; display: flex; gap: 28pt;">
+    <!-- 왼쪽: 핵심 메시지 -->
+    <div style="width: 220pt; display: flex; flex-direction: column; justify-content: center; gap: 14pt;">
+      <h2 style="font-size: 22pt; font-weight: 900; color: #000; line-height: 1.2;">AI가 터미널을<br>대신 쓴다</h2>
+      <div style="border-left: 4pt solid #FF2D55; padding-left: 12pt;">
+        <p style="font-size: 11pt; color: #333; line-height: 1.6;">사람이 하던 반복 작업을<br>클로드 코드가 직접 수행</p>
+      </div>
+      <div class="card" style="background: #F5F500; padding: 10pt 14pt;">
+        <p style="font-family: 'Courier New', monospace; font-size: 10pt; font-weight: 700; color: #000;">"설치해줘" → 바로 실행</p>
+      </div>
+    </div>
+
+    <!-- 오른쪽: 예시 커맨드들 -->
+    <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 8pt;">
+      <p style="font-family: 'Courier New', monospace; font-size: 8pt; color: #999; letter-spacing: 0.1em; margin-bottom: 4pt;">EXAMPLE COMMANDS</p>
+
+      <div class="cmd-block">
+        <p style="font-family: 'Courier New', monospace; font-size: 9pt; color: #888;">$</p>
+        <p style="font-family: 'Courier New', monospace; font-size: 11pt; color: #F5F500; flex: 1;">npm install &amp;&amp; npm run build</p>
+        <p style="font-size: 9pt; color: #555;">패키지 설치·빌드</p>
+      </div>
+
+      <div class="cmd-block">
+        <p style="font-family: 'Courier New', monospace; font-size: 9pt; color: #888;">$</p>
+        <p style="font-family: 'Courier New', monospace; font-size: 11pt; color: #F5F500; flex: 1;">git add . &amp;&amp; git commit -m "..."</p>
+        <p style="font-size: 9pt; color: #555;">Git 커밋</p>
+      </div>
+
+      <div class="cmd-block">
+        <p style="font-family: 'Courier New', monospace; font-size: 9pt; color: #888;">$</p>
+        <p style="font-family: 'Courier New', monospace; font-size: 11pt; color: #F5F500; flex: 1;">pytest tests/ --cov</p>
+        <p style="font-size: 9pt; color: #555;">테스트 실행</p>
+      </div>
+
+      <div class="cmd-block">
+        <p style="font-family: 'Courier New', monospace; font-size: 9pt; color: #888;">$</p>
+        <p style="font-family: 'Courier New', monospace; font-size: 11pt; color: #FF2D55; flex: 1;">오류 발견 → 자동 수정 → 재실행</p>
+        <p style="font-size: 9pt; color: #555;">자율 디버깅</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

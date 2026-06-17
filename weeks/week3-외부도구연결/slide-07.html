@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{width:720pt;height:405pt;font-family:'Inter','SF Pro',system-ui,-apple-system,sans-serif;background:#F8F8F2;display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:auto 1fr auto;gap:10pt;padding:20pt;overflow:hidden}
+  .cell{border-radius:14pt;padding:18pt 18pt;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between}
+  .head{grid-column:1/4;background:#1A1A2E;color:#F8F8F2;flex-direction:row;align-items:center;justify-content:space-between;padding:14pt 22pt}
+  .head .num{font-size:9.5pt;font-weight:600;color:#FFE66D}
+  .head h2{font-size:18pt;font-weight:600;letter-spacing:-0.3pt}
+  .step .label{font-size:8pt;letter-spacing:0.15pt;font-weight:700;text-transform:uppercase;margin-bottom:6pt}
+  .step h3{font-size:14pt;font-weight:600;letter-spacing:-0.2pt;line-height:1.25;margin-bottom:10pt}
+  .step p{font-size:10pt;line-height:1.4}
+  .step .out{margin-top:12pt;padding-top:10pt;border-top:0.5pt solid rgba(26,26,46,0.25);font-family:'SF Mono',Menlo,monospace;font-size:9pt;font-weight:600}
+  .s1{background:#E8FF3B;color:#1A1A2E}
+  .s2{background:#FF6B6B;color:#F8F8F2}
+  .s2 .out{border-top-color:rgba(248,248,242,0.3)}
+  .s3{background:#4ECDC4;color:#1A1A2E}
+  .foot{grid-column:1/4;background:#FFE66D;color:#1A1A2E;flex-direction:row;align-items:center;justify-content:space-between;padding:12pt 22pt}
+  .foot .label{font-size:8.5pt;letter-spacing:0.15pt;font-weight:700;text-transform:uppercase}
+  .foot .quote{font-size:11pt;font-weight:600;font-style:italic}
+</style>
+</head>
+<body>
+  <div class="cell head">
+    <h2>실습 ②: 인용 검증 + 상호참조</h2>
+    <span class="num">07 / 10</span>
+  </div>
+  <div class="cell step s1">
+    <div>
+      <p class="label">Step 1</p>
+      <h3>본문 조회</h3>
+      <p>"직제규정 제9조<br>본문 보여줘"</p>
+    </div>
+    <p class="out">get_article</p>
+  </div>
+  <div class="cell step s2">
+    <div>
+      <p class="label">Step 2</p>
+      <h3>인용 검증</h3>
+      <p>"이 문장 인용이<br>맞는지 검증해줘"</p>
+    </div>
+    <p class="out">verify_citation → ok / not_found</p>
+  </div>
+  <div class="cell step s3">
+    <div>
+      <p class="label">Step 3</p>
+      <h3>상호참조 그래프</h3>
+      <p>"이 조문 인용한<br>다른 규정 다 찾아줘"</p>
+    </div>
+    <p class="out">find_references</p>
+  </div>
+  <div class="cell foot">
+    <span class="label">효과</span>
+    <span class="quote">LLM 환각 방지 + 규정 간 연결 자동 추적</span>
+  </div>
+</body>
+</html>

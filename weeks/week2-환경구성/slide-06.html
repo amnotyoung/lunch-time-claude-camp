@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 720pt;
+      height: 405pt;
+      font-family: system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <!-- nav -->
+  <div style="height: 26pt; background: #000; display: flex; align-items: center; justify-content: space-between; padding: 0 40pt; flex-shrink: 0;">
+    <span style="font-size: 8.5pt; color: #636366;">설정</span>
+    <span style="font-size: 8.5pt; color: #3a3a3c;">06 / 08</span>
+  </div>
+
+  <!-- header -->
+  <div style="padding: 18pt 40pt 0; flex-shrink: 0;">
+    <h2 style="font-size: 16pt; font-weight: 600; color: #1d1d1f; letter-spacing: -0.3pt;">Global Settings vs Project Settings</h2>
+    <p style="font-size: 9pt; color: #7a7a7a; margin-top: 4pt;">클로드에게 "이것만은 꼭 지켜줘"를 적어두는 곳</p>
+  </div>
+
+  <!-- two columns -->
+  <div style="flex: 1; display: flex; gap: 0; padding: 16pt 40pt 20pt; overflow: hidden;">
+
+    <!-- Global Settings -->
+    <div style="flex: 1; display: flex; flex-direction: column; padding-right: 24pt; border-right: 0.5pt solid #e5e5ea;">
+      <div style="display: flex; align-items: center; gap: 8pt; margin-bottom: 14pt;">
+        <span style="font-size: 8pt; font-weight: 600; color: #fff; background: #3a3a3c; padding: 3pt 10pt; border-radius: 9999pt;">Global</span>
+        <p style="font-size: 8.5pt; color: #7a7a7a;">모든 프로젝트에 적용</p>
+      </div>
+
+      <p style="font-size: 8pt; font-family: 'Courier New', monospace; color: #aeaeb2; margin-bottom: 12pt;">~/.claude/CLAUDE.md</p>
+
+      <div style="display: flex; flex-direction: column; gap: 8pt;">
+        <div style="padding: 9pt 12pt; background: #f5f5f7; border-radius: 8pt;">
+          <p style="font-size: 8.5pt; font-weight: 600; color: #1d1d1f; margin-bottom: 3pt;">언어 · 말투</p>
+          <p style="font-size: 8pt; color: #7a7a7a; font-family: 'Courier New', monospace; line-height: 1.6;">"항상 한국어로 대답해줘"<br>"말 끝에 이모지 쓰지 마"</p>
+        </div>
+        <div style="padding: 9pt 12pt; background: #f5f5f7; border-radius: 8pt;">
+          <p style="font-size: 8.5pt; font-weight: 600; color: #1d1d1f; margin-bottom: 3pt;">코드 습관</p>
+          <p style="font-size: 8pt; color: #7a7a7a; font-family: 'Courier New', monospace; line-height: 1.6;">"커밋 메시지는 영어로"<br>"주석은 꼭 필요할 때만"</p>
+        </div>
+        <div style="padding: 9pt 12pt; background: #f5f5f7; border-radius: 8pt;">
+          <p style="font-size: 8.5pt; font-weight: 600; color: #1d1d1f; margin-bottom: 3pt;">내 정보</p>
+          <p style="font-size: 8pt; color: #7a7a7a; font-family: 'Courier New', monospace; line-height: 1.6;">"나는 비개발자야, 쉽게 설명해줘"</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Settings -->
+    <div style="flex: 1; display: flex; flex-direction: column; padding-left: 24pt;">
+      <div style="display: flex; align-items: center; gap: 8pt; margin-bottom: 14pt;">
+        <span style="font-size: 8pt; font-weight: 600; color: #fff; background: #0066cc; padding: 3pt 10pt; border-radius: 9999pt;">Project</span>
+        <p style="font-size: 8.5pt; color: #7a7a7a;">이 프로젝트에만 적용 · 팀 공유 가능</p>
+      </div>
+
+      <p style="font-size: 8pt; font-family: 'Courier New', monospace; color: #aeaeb2; margin-bottom: 12pt;">.claude/CLAUDE.md  (프로젝트 폴더 안)</p>
+
+      <div style="display: flex; flex-direction: column; gap: 8pt;">
+        <div style="padding: 9pt 12pt; background: #f0f6ff; border-radius: 8pt; border: 0.5pt solid #cce0ff;">
+          <p style="font-size: 8.5pt; font-weight: 600; color: #1d1d1f; margin-bottom: 3pt;">기술 스택</p>
+          <p style="font-size: 8pt; color: #7a7a7a; font-family: 'Courier New', monospace; line-height: 1.6;">"이 프로젝트는 Python 3.11"<br>"패키지 관리는 pip 사용"</p>
+        </div>
+        <div style="padding: 9pt 12pt; background: #f0f6ff; border-radius: 8pt; border: 0.5pt solid #cce0ff;">
+          <p style="font-size: 8.5pt; font-weight: 600; color: #1d1d1f; margin-bottom: 3pt;">규칙 · 제약</p>
+          <p style="font-size: 8pt; color: #7a7a7a; font-family: 'Courier New', monospace; line-height: 1.6;">"API 키는 .env에서 읽어와"<br>"tests/ 폴더에 테스트도 만들어"</p>
+        </div>
+        <div style="padding: 9pt 12pt; background: #f0f6ff; border-radius: 8pt; border: 0.5pt solid #cce0ff;">
+          <p style="font-size: 8.5pt; font-weight: 600; color: #1d1d1f; margin-bottom: 3pt;">팀 컨텍스트</p>
+          <p style="font-size: 8pt; color: #7a7a7a; font-family: 'Courier New', monospace; line-height: 1.6;">"배포는 `python deploy.py`로"</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- bottom tip -->
+  <div style="height: 34pt; border-top: 0.5pt solid #f0f0f0; display: flex; align-items: center; padding: 0 40pt; gap: 10pt; flex-shrink: 0;">
+    <span style="font-size: 8.5pt; color: #aeaeb2;">코드 탭에서 바로 열기 →</span>
+    <span style="font-family: 'Courier New', monospace; font-size: 8pt; color: #0066cc; background: #f0f6ff; padding: 2pt 8pt; border-radius: 5pt;">~/.claude/CLAUDE.md 파일 열어줘</span>
+  </div>
+</body>
+</html>

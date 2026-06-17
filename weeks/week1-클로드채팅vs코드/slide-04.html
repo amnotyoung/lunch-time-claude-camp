@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 720pt;
+      height: 405pt;
+      font-family: 'Pretendard', sans-serif;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .card {
+      border: 3pt solid #000;
+      box-shadow: 5pt 5pt 0 #000;
+    }
+  </style>
+</head>
+<body>
+  <!-- 헤더 -->
+  <div style="background: #000; padding: 8pt 40pt; display: flex; justify-content: space-between; align-items: center;">
+    <div style="display: flex; align-items: center; gap: 12pt;">
+      <div style="background: #F5F500; padding: 3pt 10pt;">
+        <p style="font-family: 'Courier New', monospace; font-size: 8pt; font-weight: 700; color: #000;">DIFF 01</p>
+      </div>
+      <p style="font-family: 'Courier New', monospace; font-size: 9pt; color: #fff;">파일을 직접 읽고 쓴다</p>
+    </div>
+    <p style="font-family: 'Courier New', monospace; font-size: 9pt; color: #555;">04 / 09</p>
+  </div>
+
+  <div style="flex: 1; padding: 24pt 40pt 20pt; display: flex; gap: 24pt; align-items: stretch;">
+    <!-- BEFORE -->
+    <div style="flex: 1; display: flex; flex-direction: column; gap: 10pt;">
+      <div style="display: flex; align-items: center; gap: 8pt; margin-bottom: 4pt;">
+        <div style="width: 14pt; height: 14pt; background: #ccc; border: 2pt solid #000;"></div>
+        <p style="font-family: 'Courier New', monospace; font-size: 9pt; font-weight: 700; color: #888; letter-spacing: 0.1em;">클로드 채팅</p>
+      </div>
+      <div style="border: 2pt dashed #ccc; padding: 12pt 14pt; background: #fafafa; flex: 1;">
+        <p style="font-size: 11pt; font-weight: 700; color: #999; margin-bottom: 10pt;">반복되는 복붙 루프</p>
+        <ol style="padding-left: 16pt; display: flex; flex-direction: column; gap: 8pt;">
+          <li style="font-size: 10pt; color: #aaa; font-family: 'Courier New', monospace;">① 에디터에서 코드 복사</li>
+          <li style="font-size: 10pt; color: #aaa; font-family: 'Courier New', monospace;">② 채팅창에 붙여넣기</li>
+          <li style="font-size: 10pt; color: #aaa; font-family: 'Courier New', monospace;">③ 답변 받기</li>
+          <li style="font-size: 10pt; color: #aaa; font-family: 'Courier New', monospace;">④ 다시 에디터에 붙여넣기</li>
+          <li style="font-size: 10pt; color: #FF2D55; font-family: 'Courier New', monospace; font-weight: 700;">⑤ 반복...</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- 화살표 -->
+    <div style="display: flex; align-items: center; justify-content: center; width: 32pt;">
+      <p style="font-size: 28pt; font-weight: 900; color: #000;">→</p>
+    </div>
+
+    <!-- AFTER -->
+    <div style="flex: 1; display: flex; flex-direction: column; gap: 10pt;">
+      <div style="display: flex; align-items: center; gap: 8pt; margin-bottom: 4pt;">
+        <div style="width: 14pt; height: 14pt; background: #F5F500; border: 2pt solid #000;"></div>
+        <p style="font-family: 'Courier New', monospace; font-size: 9pt; font-weight: 700; color: #000; letter-spacing: 0.1em;">클로드 코드</p>
+      </div>
+      <div class="card" style="padding: 12pt 14pt; background: #F5F500; flex: 1; display: flex; flex-direction: column; gap: 10pt;">
+        <p style="font-size: 11pt; font-weight: 900; color: #000;">AI가 파일을 직접 처리</p>
+        <div style="display: flex; flex-direction: column; gap: 6pt;">
+          <div style="background: #000; padding: 7pt 10pt;">
+            <p style="font-family: 'Courier New', monospace; font-size: 10pt; color: #F5F500;">📂 파일 열기 · 읽기 · 수정</p>
+          </div>
+          <div style="background: #000; padding: 7pt 10pt;">
+            <p style="font-family: 'Courier New', monospace; font-size: 10pt; color: #F5F500;">✏️ 여러 파일 동시에 편집</p>
+          </div>
+          <div style="background: #000; padding: 7pt 10pt;">
+            <p style="font-family: 'Courier New', monospace; font-size: 10pt; color: #F5F500;">🔍 폴더 전체 탐색·검색</p>
+          </div>
+        </div>
+        <p style="font-family: 'Courier New', monospace; font-size: 10pt; color: #000; font-weight: 700; margin-top: 2pt;">복붙 없이, 바로 결과</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

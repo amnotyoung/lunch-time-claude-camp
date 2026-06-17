@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 720pt;
+      height: 405pt;
+      font-family: 'Pretendard', sans-serif;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .example-row {
+      display: flex;
+      gap: 0;
+      border: 3pt solid #000;
+      box-shadow: 4pt 4pt 0 #000;
+      overflow: hidden;
+    }
+    .ex-chat {
+      flex: 1;
+      padding: 10pt 14pt;
+      background: #f5f5f5;
+      border-right: 2pt solid #000;
+    }
+    .ex-code {
+      flex: 1;
+      padding: 10pt 14pt;
+      background: #F5F500;
+    }
+  </style>
+</head>
+<body>
+  <!-- 헤더 -->
+  <div style="background: #000; padding: 8pt 40pt; display: flex; justify-content: space-between; align-items: center;">
+    <p style="font-family: 'Courier New', monospace; font-size: 9pt; color: #fff;">실제 활용 예시</p>
+    <p style="font-family: 'Courier New', monospace; font-size: 9pt; color: #555;">08 / 09</p>
+  </div>
+
+  <div style="flex: 1; padding: 16pt 40pt 16pt; display: flex; flex-direction: column; gap: 10pt;">
+    <!-- 컬럼 헤더 -->
+    <div style="display: flex; gap: 0; padding: 0 0 6pt 0;">
+      <div style="width: 130pt;"></div>
+      <div style="flex: 1; display: flex; gap: 4pt;">
+        <div style="flex: 1; text-align: center;">
+          <p style="font-family: 'Courier New', monospace; font-size: 9pt; color: #999; font-weight: 700;">클로드 채팅</p>
+        </div>
+        <div style="flex: 1; text-align: center;">
+          <p style="font-family: 'Courier New', monospace; font-size: 9pt; color: #000; font-weight: 700;">클로드 코드</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 예시 A -->
+    <div style="display: flex; align-items: stretch; gap: 12pt;">
+      <div style="width: 130pt; display: flex; align-items: center;">
+        <p style="font-size: 10pt; font-weight: 700; color: #000; line-height: 1.4;">📁 100개 파일<br>일괄 변환</p>
+      </div>
+      <div class="example-row" style="flex: 1;">
+        <div class="ex-chat">
+          <p style="font-family: 'Courier New', monospace; font-size: 9pt; color: #999;">코드 알려줌 → 내가 직접 스크립트 작성 → 실행</p>
+        </div>
+        <div class="ex-code">
+          <p style="font-family: 'Courier New', monospace; font-size: 9pt; color: #000; font-weight: 700;">파일 찾기 → 변환 → 완료 보고 (직접)</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 예시 B -->
+    <div style="display: flex; align-items: stretch; gap: 12pt;">
+      <div style="width: 130pt; display: flex; align-items: center;">
+        <p style="font-size: 10pt; font-weight: 700; color: #000; line-height: 1.4;">🗄️ DB 데이터<br>분석 요청</p>
+      </div>
+      <div class="example-row" style="flex: 1;">
+        <div class="ex-chat">
+          <p style="font-family: 'Courier New', monospace; font-size: 9pt; color: #999;">쿼리 알려줌 → 내가 DB 접속 → 결과 다시 복붙</p>
+        </div>
+        <div class="ex-code">
+          <p style="font-family: 'Courier New', monospace; font-size: 9pt; color: #000; font-weight: 700;">SQLite MCP로 DB 직접 질의 → 결과 바로 분석</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 예시 C -->
+    <div style="display: flex; align-items: stretch; gap: 12pt;">
+      <div style="width: 130pt; display: flex; align-items: center;">
+        <p style="font-size: 10pt; font-weight: 700; color: #000; line-height: 1.4;">📊 매일 반복<br>보고서 작성</p>
+      </div>
+      <div class="example-row" style="flex: 1;">
+        <div class="ex-chat">
+          <p style="font-family: 'Courier New', monospace; font-size: 9pt; color: #999;">틀 잡아줌 → 매일 내가 데이터 넣고 정리</p>
+        </div>
+        <div class="ex-code">
+          <p style="font-family: 'Courier New', monospace; font-size: 9pt; color: #000; font-weight: 700;">스킬로 저장 → "/보고서" 한 방에 자동 생성</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 요약 -->
+    <div style="display: flex; justify-content: flex-end; margin-top: 2pt;">
+      <div style="border: 3pt solid #000; box-shadow: 4pt 4pt 0 #000; background: #000; padding: 8pt 20pt;">
+        <p style="font-size: 11pt; font-weight: 700; color: #F5F500;">채팅: AI가 알려준다 &nbsp;→&nbsp; 코드: AI가 직접 한다</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

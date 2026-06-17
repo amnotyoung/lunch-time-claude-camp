@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{width:720pt;height:405pt;font-family:'Inter','SF Pro',system-ui,-apple-system,sans-serif;background:#F8F8F2;display:grid;grid-template-columns:1.4fr 1fr;grid-template-rows:auto 1fr 1fr;gap:10pt;padding:20pt;overflow:hidden}
+  .cell{border-radius:14pt;padding:18pt 22pt;overflow:hidden}
+  .head{grid-column:1/3;background:#1A1A2E;color:#F8F8F2;display:flex;align-items:center;justify-content:space-between;padding:14pt 22pt}
+  .head .num{font-size:9.5pt;font-weight:600;color:#4ECDC4}
+  .head h2{font-size:18pt;font-weight:600;letter-spacing:-0.3pt}
+  .main{grid-row:2/4;background:#4ECDC4;color:#1A1A2E;display:flex;flex-direction:column;justify-content:center}
+  .main .label{font-size:8.5pt;letter-spacing:0.2pt;font-weight:700;text-transform:uppercase;margin-bottom:10pt}
+  .main h3{font-size:21pt;font-weight:600;letter-spacing:-0.4pt;line-height:1.2;margin-bottom:16pt}
+  .main .cmd{background:#1A1A2E;color:#E8FF3B;font-family:'SF Mono',Menlo,monospace;font-size:11pt;padding:12pt 14pt;border-radius:8pt;line-height:1.5}
+  .main .url{color:#FFE66D}
+  .pre{background:#FFE66D;color:#1A1A2E;display:flex;flex-direction:column;justify-content:center}
+  .pre .label{font-size:8pt;letter-spacing:0.15pt;font-weight:700;text-transform:uppercase;margin-bottom:6pt}
+  .pre p{font-size:11pt;font-weight:500;line-height:1.4}
+  .pre .hint{font-size:9pt;font-weight:400;margin-top:6pt;opacity:0.75}
+  .check{background:#E8FF3B;color:#1A1A2E;display:flex;flex-direction:column;justify-content:center}
+  .check .label{font-size:8pt;letter-spacing:0.15pt;font-weight:700;text-transform:uppercase;margin-bottom:6pt}
+  .check .quote{font-size:11pt;font-weight:600;line-height:1.4;font-style:italic}
+</style>
+</head>
+<body>
+  <div class="cell head">
+    <h2>방식 ② 본격: koica-reg-mcp 연결</h2>
+    <span class="num">05 / 10</span>
+  </div>
+  <div class="cell main">
+    <p class="label">한 줄이면 끝</p>
+    <h3>GitHub 주소만 알려주면<br>Claude가 알아서 설치한다</h3>
+    <div class="cmd">"이 GitHub 주소의 도구를 연결해줘"<br><span class="url">github.com/amnotyoung/koica-reg-mcp</span></div>
+  </div>
+  <div class="cell pre">
+    <p class="label">왜 koica-reg</p>
+    <p>규정 38개·1,660 조문<br>자연어로 즉시</p>
+    <p class="hint">PDF Ctrl+F 시대 종료</p>
+  </div>
+  <div class="cell check">
+    <p class="label">연결 확인</p>
+    <p class="quote">"koica-reg 잘 연결됐는지 확인해줘"</p>
+  </div>
+</body>
+</html>

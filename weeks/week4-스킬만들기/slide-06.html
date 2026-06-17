@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{width:720pt;height:405pt;font-family:'Inter','SF Pro',system-ui,-apple-system,sans-serif;background:#1d1d1f;color:#F8F8F2;display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:auto auto 1fr auto;gap:10pt;padding:20pt;overflow:hidden}
+  .cell{border-radius:14pt;padding:16pt 20pt;overflow:hidden}
+  .head{grid-column:1/4;background:#1A1A2E;color:#F8F8F2;display:flex;align-items:center;justify-content:space-between;padding:14pt 22pt}
+  .head .num{font-size:9.5pt;font-weight:600;color:#E8FF3B;letter-spacing:0.15pt}
+  .head h2{font-size:20pt;font-weight:600;letter-spacing:-0.3pt}
+  .anchor{grid-column:1/4;background:#E8FF3B;color:#1A1A2E;padding:10pt 22pt;display:flex;align-items:center;justify-content:space-between;border-radius:14pt}
+  .anchor .msg{font-size:13pt;font-weight:700;letter-spacing:-0.2pt}
+  .anchor .msg b{background:#1A1A2E;color:#E8FF3B;padding:2pt 8pt;border-radius:6pt}
+  .anchor .side{font-size:9pt;font-weight:600;opacity:0.7}
+  .tile{display:flex;flex-direction:column;color:#1A1A2E}
+  .tile .tag{font-size:8.5pt;font-weight:700;letter-spacing:0.25pt;text-transform:uppercase;margin-bottom:5pt;opacity:0.65}
+  .tile h3{font-size:16pt;font-weight:800;letter-spacing:-0.4pt;line-height:1.05;margin-bottom:8pt}
+  .tile .body{font-size:9.5pt;line-height:1.5;font-weight:500;margin-bottom:8pt}
+  .tile code{font-family:'SF Mono','Menlo',monospace;font-size:8.8pt;background:rgba(26,26,46,0.12);padding:1pt 5pt;border-radius:4pt;display:inline-block}
+  .tile .res{font-size:8.5pt;font-weight:600;margin-top:auto;padding-top:8pt;border-top:1pt dashed rgba(26,26,46,0.3);line-height:1.4;opacity:0.8}
+  .codex{background:#4ECDC4}
+  .ag{background:#FFE66D}
+  .diff{background:#F8F8F2;color:#1A1A2E;border:1.5pt solid #444}
+  .diff h3{color:#1A1A2E}
+  .foot{grid-column:1/4;background:#1A1A2E;color:#F8F8F2;font-size:9.5pt;font-weight:500;padding:10pt 22pt;border-radius:14pt;display:flex;justify-content:space-between;align-items:center}
+  .foot b{color:#E8FF3B;font-weight:700}
+</style>
+</head>
+<body>
+  <div class="cell head">
+    <h2>Codex / Antigravity 사용자라면</h2>
+    <span class="num">06 / 07</span>
+  </div>
+
+  <div class="cell anchor">
+    <p class="msg">SKILL.md는 <b>개방 표준</b> — 폴더 그대로 옮기면 다른 도구에서도 작동</p>
+    <span class="side">동일한 description → 동일한 트리거</span>
+  </div>
+
+  <div class="cell tile codex">
+    <p class="tag">Tool A · 터미널형</p>
+    <h3>Codex CLI</h3>
+    <p class="body">방금 만든 폴더를 <code>~/.codex/skills/ktm/</code>에 복사하거나 심볼릭 링크.</p>
+    <p class="res">→ "인사규정 핵심 보고서 만들어줘" 같은 발화 그대로 통함</p>
+  </div>
+
+  <div class="cell tile ag">
+    <p class="tag">Tool B · IDE형</p>
+    <h3>Antigravity</h3>
+    <p class="body">앱 설정에서 <b>스킬 폴더 위치</b>를 확인하고 그곳에 폴더를 두면 끝.</p>
+    <p class="res">→ 같은 자연어 발화로 동일 트리거</p>
+  </div>
+
+  <div class="cell tile diff">
+    <p class="tag">차이점 한 줄</p>
+    <h3>실행 환경은 도구마다</h3>
+    <p class="body">셸 권한·MCP 연결 방식은 도구별로 약간 다름. 동작 안 하면 <b>스킬 폴더 위치</b>만 다시 확인.</p>
+    <p class="res">→ description은 한 번 잘 써두면 어디든 OK</p>
+  </div>
+
+  <div class="cell foot">
+    <span>ChatGPT만 쓰는 분 · Antigravity로 옮긴 분도 <b>본 흐름 그대로</b></span>
+    <span>한 폴더 = 세 도구 호환</span>
+  </div>
+</body>
+</html>

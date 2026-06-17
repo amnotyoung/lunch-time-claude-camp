@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{width:720pt;height:405pt;font-family:'Inter','SF Pro',system-ui,-apple-system,sans-serif;background:#F8F8F2;display:grid;grid-template-columns:1.55fr 1fr 1fr;grid-template-rows:auto 1fr 1fr;gap:10pt;padding:20pt;overflow:hidden}
+  .cell{border-radius:14pt;padding:14pt 18pt;overflow:hidden}
+  .head{grid-column:1/4;background:#1A1A2E;color:#F8F8F2;display:flex;align-items:center;justify-content:space-between;padding:14pt 22pt}
+  .head .num{font-size:9.5pt;font-weight:600;color:#E8FF3B;letter-spacing:0.15pt}
+  .head h2{font-size:20pt;font-weight:600;letter-spacing:-0.3pt}
+  .anchor{grid-row:2/4;background:#1A1A2E;color:#F8F8F2;display:flex;flex-direction:column;gap:8pt}
+  .anchor .lab{font-size:8.5pt;letter-spacing:0.2pt;text-transform:uppercase;font-weight:700;color:#E8FF3B;margin-bottom:2pt}
+  .anchor pre{font-family:'SF Mono','Menlo',monospace;font-size:8.7pt;line-height:1.45;background:#0F0F1A;padding:10pt 12pt;border-radius:8pt;white-space:pre;overflow:hidden}
+  .anchor .pre-fm{font-size:7.8pt;line-height:1.45}
+  .anchor .note{font-size:9pt;color:#A0A0B0;line-height:1.4;margin-top:auto}
+  .anchor .note b{color:#E8FF3B;font-weight:700}
+  .tile{display:flex;flex-direction:column;justify-content:center;padding:14pt 18pt}
+  .tile h3{font-size:12pt;font-weight:700;letter-spacing:-0.2pt;margin-bottom:4pt;line-height:1.2}
+  .tile p{font-size:9.5pt;font-weight:400;line-height:1.4}
+  .tile p b{font-weight:700}
+  .y{background:#E8FF3B;color:#1A1A2E}
+  .t{background:#4ECDC4;color:#1A1A2E}
+  .c{background:#FFE66D;color:#1A1A2E}
+  .p{background:#F8F8F2;color:#1A1A2E;border:1.5pt solid #1A1A2E}
+  .p .tag{font-size:7.5pt;font-weight:700;letter-spacing:0.25pt;text-transform:uppercase;background:#1A1A2E;color:#F8F8F2;padding:2pt 6pt;border-radius:4pt;display:inline-block;margin-bottom:6pt}
+</style>
+</head>
+<body>
+  <div class="cell head">
+    <h2>SKILL.md 한 장이 곧 스킬 — 나머지는 보조</h2>
+    <span class="num">03 / 07</span>
+  </div>
+
+  <div class="cell anchor">
+    <div>
+      <p class="lab">표준 폴더 구조</p>
+      <pre>my-skill/
+├── SKILL.md           # 주요 지침 (필수)
+├── template.md        # Claude가 채울 템플릿
+├── examples/
+│   └── sample.md      # 예상 형식 예제
+└── scripts/
+    └── validate.sh    # Claude가 실행할 스크립트</pre>
+    </div>
+    <div>
+      <p class="lab">SKILL.md frontmatter</p>
+      <pre class="pre-fm">---
+name: ktm
+description: KOICA 규정 텍스트마이닝 보고서.
+  category(hr/finance 등) 조회 → 키워드 →
+  그래프·워드클라우드 → 마크다운 보고서.
+  트리거: "인사규정 핵심 보고서 만들어줘",
+  "회계 규정 텍스트마이닝", "ktm 스킬로 분석"
+---</pre>
+    </div>
+    <p class="note"><b>description 품질</b>이 곧 스킬 성능 — Claude가 이 키워드를 보고 트리거할지 스스로 판단</p>
+  </div>
+
+  <div class="cell tile y">
+    <h3>설치 위치 두 갈래</h3>
+    <p><b>user</b>: <code>~/.claude/skills/&lt;이름&gt;/</code><br><b>project</b>: <code>&lt;프로젝트&gt;/.claude/skills/&lt;이름&gt;/</code></p>
+  </div>
+  <div class="cell tile t">
+    <h3>SKILL.md 1장</h3>
+    <p>필수는 이것뿐. template / examples / scripts는 <b>필요할 때만</b></p>
+  </div>
+  <div class="cell tile c">
+    <h3>트리거는 자연어</h3>
+    <p><b>description에 트리거 키워드 충분히</b> — 평소 한국어 발화에 잘 걸리게</p>
+  </div>
+  <div class="cell tile p">
+    <span class="tag">개방 표준</span>
+    <h3>한 폴더 → 세 도구</h3>
+    <p>Claude Code · Codex CLI · Antigravity 모두 동일한 SKILL.md 표준</p>
+  </div>
+</body>
+</html>

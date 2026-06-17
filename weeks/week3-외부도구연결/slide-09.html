@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{width:720pt;height:405pt;font-family:'Inter','SF Pro',system-ui,-apple-system,sans-serif;background:#F8F8F2;display:grid;grid-template-columns:1.3fr 1fr;grid-template-rows:auto 1fr 1fr;gap:10pt;padding:20pt;overflow:hidden}
+  .cell{border-radius:14pt;padding:18pt 22pt;overflow:hidden}
+  .head{grid-column:1/3;background:#1A1A2E;color:#F8F8F2;display:flex;align-items:center;justify-content:space-between;padding:14pt 22pt}
+  .head .num{font-size:9.5pt;font-weight:600;color:#FF6B6B}
+  .head h2{font-size:18pt;font-weight:600;letter-spacing:-0.3pt}
+  .head .tag{font-size:9pt;font-weight:600;color:#FFE66D;letter-spacing:0.15pt}
+  .anchor{grid-row:2/4;background:#FF6B6B;color:#F8F8F2;display:flex;flex-direction:column;justify-content:space-between}
+  .anchor .label{font-size:8.5pt;letter-spacing:0.2pt;font-weight:700;text-transform:uppercase;opacity:0.85;margin-bottom:8pt}
+  .anchor h3{font-size:21pt;font-weight:600;letter-spacing:-0.4pt;line-height:1.2;margin-bottom:12pt}
+  .anchor p{font-size:11pt;line-height:1.5}
+  .anchor .quote{margin-top:12pt;padding-top:12pt;border-top:1pt solid rgba(248,248,242,0.3);font-size:11pt;font-style:italic;font-weight:500}
+  .same{background:#4ECDC4;color:#1A1A2E;display:flex;flex-direction:column;justify-content:center}
+  .same .label{font-size:8pt;letter-spacing:0.15pt;font-weight:700;text-transform:uppercase;margin-bottom:6pt}
+  .same h4{font-size:13pt;font-weight:600;letter-spacing:-0.2pt;margin-bottom:6pt}
+  .same p{font-size:10pt;line-height:1.4}
+  .diff{background:#E8FF3B;color:#1A1A2E;display:flex;flex-direction:column;justify-content:center}
+  .diff .label{font-size:8pt;letter-spacing:0.15pt;font-weight:700;text-transform:uppercase;margin-bottom:6pt}
+  .diff h4{font-size:13pt;font-weight:600;letter-spacing:-0.2pt;margin-bottom:6pt}
+  .diff p{font-size:10pt;line-height:1.4}
+  .diff .skip{margin-top:6pt;font-size:9pt;font-weight:500;opacity:0.7}
+</style>
+</head>
+<body>
+  <div class="cell head">
+    <h2>Codex 사용자라면</h2>
+    <span class="tag">곁다리 · ChatGPT 구독자용</span>
+    <span class="num">09 / 10</span>
+  </div>
+  <div class="cell anchor">
+    <div>
+      <p class="label">핵심 메시지</p>
+      <h3>오늘 배운 패턴은<br>Codex CLI에서도<br>그대로 통한다</h3>
+      <p>Codex CLI = OpenAI 진영의 터미널 AI 에이전트<br>(Claude Code 대응)</p>
+    </div>
+    <p class="quote">손해 없음 — 본 흐름 그대로 따라오면 됩니다</p>
+  </div>
+  <div class="cell same">
+    <p class="label">같은 점 ①</p>
+    <h4>MCP 서버 연결 방식 동일</h4>
+    <p>koica-reg 포함, <code style="font-family:'SF Mono',Menlo,monospace;font-size:9pt;background:rgba(26,26,46,0.12);padding:1pt 4pt;border-radius:3pt">codex mcp add</code><br>한 줄로 등록</p>
+  </div>
+  <div class="cell diff">
+    <p class="label">같은 점 ②</p>
+    <h4>셸 권한이 내장</h4>
+    <p>코드 탭처럼 파일·터미널 바로<br>별도 도구 불필요</p>
+    <p class="skip">→ 추가 설치 없이 바로 연결</p>
+  </div>
+</body>
+</html>

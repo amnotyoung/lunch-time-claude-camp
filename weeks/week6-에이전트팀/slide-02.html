@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{width:720pt;height:405pt;font-family:'Inter','SF Pro',system-ui,-apple-system,sans-serif;background:#F8F8F2;display:grid;grid-template-columns:1.5fr 1fr;grid-template-rows:auto 1fr 1fr auto;gap:10pt;padding:20pt;overflow:hidden}
+  .cell{border-radius:14pt;padding:16pt 20pt;overflow:hidden}
+  .head{grid-column:1/3;background:#1A1A2E;color:#F8F8F2;display:flex;align-items:center;justify-content:space-between;padding:14pt 22pt}
+  .head .num{font-size:9.5pt;font-weight:600;color:#E8FF3B;letter-spacing:0.15pt}
+  .head h2{font-size:20pt;font-weight:600;letter-spacing:-0.3pt}
+  .anchor{grid-row:2/4;background:#1A1A2E;color:#F8F8F2;display:flex;flex-direction:column;justify-content:space-between}
+  .anchor .lab{font-size:8.5pt;letter-spacing:0.2pt;text-transform:uppercase;font-weight:700;color:#E8FF3B;margin-bottom:7pt}
+  .anchor .shift{font-size:14pt;font-weight:600;line-height:1.3;margin-bottom:11pt}
+  .anchor .shift s{opacity:0.5;font-weight:500}
+  .anchor .shift b{color:#E8FF3B;font-weight:800}
+  .roles{display:flex;flex-direction:column;gap:7pt}
+  .roles .r{background:#0F0F1A;border-radius:9pt;padding:8pt 12pt;border-left:3pt solid #4ECDC4}
+  .roles .r.me{border-left-color:#FF6B9D}
+  .roles .r.lead{border-left-color:#E8FF3B}
+  .roles .r .who{font-size:11.5pt;font-weight:800;letter-spacing:-0.2pt}
+  .roles .r.me .who{color:#FFB3D1}
+  .roles .r.lead .who{color:#E8FF3B}
+  .roles .r.team .who{color:#4ECDC4}
+  .roles .r .desc{font-size:8.7pt;color:#A0A0B0;font-weight:500;margin-top:2pt;line-height:1.3}
+  .roles .r .desc b{color:#F8F8F2;font-weight:700}
+  .reason{display:flex;flex-direction:column;justify-content:center}
+  .reason .tag{font-size:8pt;font-weight:700;letter-spacing:0.25pt;text-transform:uppercase;opacity:0.6;margin-bottom:4pt}
+  .reason h3{font-size:18pt;font-weight:800;letter-spacing:-0.4pt;line-height:1.05;margin-bottom:6pt}
+  .reason p{font-size:9.5pt;font-weight:500;line-height:1.4}
+  .reason p b{font-weight:800}
+  .y{background:#E8FF3B;color:#1A1A2E}
+  .t{background:#4ECDC4;color:#1A1A2E}
+  .foot{grid-column:1/3;background:#FFE66D;color:#1A1A2E;font-size:10pt;font-weight:500;padding:10pt 22pt;border-radius:14pt;display:flex;justify-content:space-between;align-items:center}
+  .foot b{font-weight:700}
+</style>
+</head>
+<body>
+  <div class="cell head">
+    <h2>한 명이 아니라 팀 — 왜 나눠 시키나</h2>
+    <span class="num">02 / 11</span>
+  </div>
+
+  <div class="cell anchor">
+    <div>
+      <p class="lab">달라지는 것</p>
+      <p class="shift"><s>Claude 한 명</s> → <b>Claude 한 팀</b></p>
+    </div>
+    <div class="roles">
+      <div class="r me">
+        <div class="who">나 (동료) — 의뢰</div>
+        <div class="desc">"팀으로 해줘" <b>한마디</b>. 큰 그림만 잡는다</div>
+      </div>
+      <div class="r lead">
+        <div class="who">팀장 — 메인 Claude</div>
+        <div class="desc">역할을 <b>알아서 나누고</b> 조율 (오케스트레이터)</div>
+      </div>
+      <div class="r team">
+        <div class="who">팀원 — 서브 에이전트</div>
+        <div class="desc">각자 자기 작업실에서 <b>독립 실행</b></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cell reason y">
+    <p class="tag">이유 01</p>
+    <h3>컨텍스트<br>오염 방지</h3>
+    <p>팀원이 자기 작업실에서 일하니, 긴 작업이 <b>팀장 대화창을 안 더럽힌다</b> — 팀장은 결론만 받음</p>
+  </div>
+  <div class="cell reason t">
+    <p class="tag">이유 02</p>
+    <h3>병렬 처리</h3>
+    <p>여러 팀원이 <b>동시에</b> → 한 명씩 순서대로보다 빠르고, <b>여러 관점</b>이 한 번에</p>
+  </div>
+
+  <div class="cell foot">
+    <span>매주 써온 Claude도 이미 <b>스스로 여러 단계를 도는 에이전트</b></span>
+    <span>이제 그 에이전트가 <b>팀장이 되어 팀원을 부린다</b> →</span>
+  </div>
+</body>
+</html>

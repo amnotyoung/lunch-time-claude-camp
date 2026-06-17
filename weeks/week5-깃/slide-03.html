@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{width:720pt;height:405pt;font-family:'Inter','SF Pro',system-ui,-apple-system,sans-serif;background:#F8F8F2;display:grid;grid-template-columns:1.5fr 1fr 1fr;grid-template-rows:auto 1fr 1fr;gap:10pt;padding:20pt;overflow:hidden}
+  .cell{border-radius:14pt;padding:14pt 18pt;overflow:hidden}
+  .head{grid-column:1/4;background:#1A1A2E;color:#F8F8F2;display:flex;align-items:center;justify-content:space-between;padding:14pt 22pt}
+  .head .num{font-size:9.5pt;font-weight:600;color:#E8FF3B;letter-spacing:0.15pt}
+  .head h2{font-size:20pt;font-weight:600;letter-spacing:-0.3pt}
+  .anchor{grid-row:2/4;background:#1A1A2E;color:#F8F8F2;display:flex;flex-direction:column;justify-content:space-between}
+  .anchor .lab{font-size:8.5pt;letter-spacing:0.2pt;text-transform:uppercase;font-weight:700;color:#E8FF3B;margin-bottom:8pt}
+  .anchor h3{font-size:16pt;font-weight:700;letter-spacing:-0.3pt;line-height:1.2;margin-bottom:6pt}
+  .anchor h3 b{color:#E8FF3B}
+  .anchor .chain{font-family:'SF Mono','Menlo',monospace;font-size:8pt;line-height:1.5;background:#0F0F1A;padding:10pt 12pt;border-radius:8pt;color:#F8F8F2;white-space:pre}
+  .anchor .chain .id{color:#4ECDC4;font-weight:700}
+  .anchor .chain .msg{color:#A0A0B0}
+  .anchor .note{font-size:9pt;color:#A0A0B0;line-height:1.4;margin-top:8pt}
+  .anchor .note b{color:#E8FF3B;font-weight:700}
+  .tile{display:flex;flex-direction:column;justify-content:center;padding:14pt 18pt}
+  .tile .tag{font-size:7.5pt;font-weight:700;letter-spacing:0.25pt;text-transform:uppercase;opacity:0.6;margin-bottom:4pt}
+  .tile h3{font-size:14pt;font-weight:800;letter-spacing:-0.3pt;margin-bottom:5pt;line-height:1.1}
+  .tile p{font-size:9.5pt;font-weight:500;line-height:1.4}
+  .tile p b{font-weight:700}
+  .tile code{font-family:'SF Mono','Menlo',monospace;font-size:8.5pt;background:rgba(26,26,46,0.12);padding:1pt 5pt;border-radius:3pt}
+  .y{background:#E8FF3B;color:#1A1A2E}
+  .t{background:#4ECDC4;color:#1A1A2E}
+  .c{background:#FFE66D;color:#1A1A2E}
+  .p{background:#F8F8F2;color:#1A1A2E;border:1.5pt solid #1A1A2E;grid-column:2/4}
+  .p .row{display:flex;align-items:center;gap:10pt}
+  .p .big{font-family:'SF Mono','Menlo',monospace;font-size:15pt;font-weight:800;color:#1A1A2E;background:rgba(78,205,196,0.3);padding:3pt 9pt;border-radius:6pt;white-space:nowrap}
+</style>
+</head>
+<body>
+  <div class="cell head">
+    <h2>외울 건 딱 3개 — 저장소 · 커밋 · 이력</h2>
+    <span class="num">03 / 07</span>
+  </div>
+
+  <div class="cell anchor">
+    <div>
+      <p class="lab">명령어는 안 외워도 된다</p>
+      <h3>"방금 거 <b>저장해줘</b>"<br>한 마디면 끝</h3>
+    </div>
+    <div class="chain">커밋 이력 (git log)
+─────────────────
+<span class="id">c3f9a1</span>  <span class="msg">새 카테고리 추가</span>
+<span class="id">8b2e07</span>  <span class="msg">그래프 색 변경</span>
+<span class="id">a1b2c3</span>  <span class="msg">ktm 첫 버전</span></div>
+    <p class="note">동료는 <b>git commit</b>을 직접 칠 일이 없다 — 자연어로 시키면 <b>Claude Code가 git 명령을 대신 실행</b></p>
+  </div>
+
+  <div class="cell tile t">
+    <p class="tag">개념 01</p>
+    <h3>저장소 repository</h3>
+    <p>버전이 차곡차곡 <b>쌓이는 폴더</b>. ktm 폴더를 저장소로 만든다</p>
+  </div>
+  <div class="cell tile y">
+    <p class="tag">개념 02</p>
+    <h3>커밋 commit</h3>
+    <p>한 시점의 <b>스냅샷</b> — 게임의 <b>세이브 포인트</b>처럼 그 순간을 통째 저장</p>
+  </div>
+  <div class="cell tile c" style="grid-column:1">
+    <p class="tag">개념 03</p>
+    <h3>이력 history · log</h3>
+    <p>커밋들이 줄지어 쌓인 <b>기록</b>. 언제든 거슬러 올라가 확인</p>
+  </div>
+
+  <div class="cell tile p">
+    <p class="tag">커밋마다 고유 좌표</p>
+    <div class="row">
+      <span class="big">a1b2c3d</span>
+      <p>커밋할 때마다 고유한 <b>커밋 ID</b>(해시)가 남는다. <code>git log</code>로 이력을 확인하고, 이 <b>ID를 기준으로 그 시점으로 되돌리기(revert)</b> — "그때로 돌아가줘"의 좌표</p>
+    </div>
+  </div>
+</body>
+</html>

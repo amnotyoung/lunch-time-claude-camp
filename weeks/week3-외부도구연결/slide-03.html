@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{width:720pt;height:405pt;font-family:'Inter','SF Pro',system-ui,-apple-system,sans-serif;background:#F8F8F2;display:grid;grid-template-columns:1fr 1.6fr;grid-template-rows:auto 1fr;gap:10pt;padding:20pt;overflow:hidden}
+  .cell{border-radius:14pt;padding:18pt 22pt;overflow:hidden}
+  .head{grid-column:1/3;background:#1A1A2E;color:#F8F8F2;display:flex;align-items:center;justify-content:space-between;padding:14pt 22pt}
+  .head .num{font-size:9.5pt;font-weight:600;color:#E8FF3B}
+  .head h2{font-size:18pt;font-weight:600;letter-spacing:-0.3pt}
+  .ok{background:#E8FF3B;color:#1A1A2E;display:flex;flex-direction:column;justify-content:center}
+  .ok .label{font-size:8pt;letter-spacing:0.15pt;font-weight:700;text-transform:uppercase;margin-bottom:8pt}
+  .ok h3{font-size:14pt;font-weight:600;letter-spacing:-0.2pt;line-height:1.3;margin-bottom:10pt}
+  .ok p{font-size:10pt;line-height:1.5}
+  .ok .arrow{margin-top:14pt;padding-top:10pt;border-top:1pt solid rgba(26,26,46,0.25);font-size:9pt;font-weight:600}
+  .ts{background:#FF6B6B;color:#F8F8F2}
+  .ts .label{font-size:8pt;letter-spacing:0.15pt;font-weight:700;text-transform:uppercase;opacity:0.85;margin-bottom:6pt}
+  .ts h3{font-size:14pt;font-weight:600;letter-spacing:-0.2pt;margin-bottom:12pt}
+  .ts ol{list-style:none;counter-reset:s}
+  .ts li{counter-increment:s;display:flex;gap:10pt;padding:6pt 0;border-top:0.5pt solid rgba(248,248,242,0.25);font-size:10pt;line-height:1.4}
+  .ts li:first-child{border-top:none;padding-top:0}
+  .ts li::before{content:counter(s);background:#1A1A2E;color:#E8FF3B;font-size:9pt;font-weight:700;width:18pt;height:18pt;border-radius:9999pt;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .ts code{font-family:'SF Mono',Menlo,monospace;font-size:9pt;background:rgba(26,26,46,0.35);padding:1pt 5pt;border-radius:3pt}
+  .ts .os{font-size:8.5pt;opacity:0.8;margin-top:2pt}
+</style>
+</head>
+<body>
+  <div class="cell head">
+    <h2>GitHub 도구 연결 — 막히면 Node.js 점검 (Win / Mac)</h2>
+    <span class="num">03 / 10</span>
+  </div>
+  <div class="cell ok">
+    <p class="label">대부분 자동</p>
+    <h3>"이 GitHub 도구<br>연결해줘"</h3>
+    <p>코드 탭이 clone · 설치까지</p>
+    <p class="arrow">→ 보통 이걸로 끝</p>
+  </div>
+  <div class="cell ts">
+    <p class="label">혹시 막힌다면</p>
+    <h3>대부분 Node.js 문제</h3>
+    <ol>
+      <li>nodejs.org/ko → LTS 버전 다운로드</li>
+      <li>설치 마법사 진행 (기본값 그대로)</li>
+      <li>코드 탭 재시작</li>
+      <li>다시 "연결해줘" → 커넥터 목록 확인</li>
+    </ol>
+  </div>
+</body>
+</html>

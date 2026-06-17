@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{width:720pt;height:405pt;font-family:'Inter','SF Pro',system-ui,-apple-system,sans-serif;background:#1d1d1f;color:#F8F8F2;display:grid;grid-template-columns:1fr;grid-template-rows:auto 1fr auto;gap:10pt;padding:20pt;overflow:hidden}
+  .cell{border-radius:14pt;padding:14pt 18pt;overflow:hidden}
+  .head{background:#1A1A2E;color:#F8F8F2;display:flex;align-items:center;justify-content:space-between;padding:14pt 22pt}
+  .head .num{font-size:9.5pt;font-weight:600;color:#E8FF3B;letter-spacing:0.15pt}
+  .head h2{font-size:20pt;font-weight:600;letter-spacing:-0.3pt}
+  .head .sub{font-size:9pt;font-weight:600;color:#A0A0B0}
+  .thread{background:#0F0F1A;display:flex;flex-direction:column;justify-content:center;gap:7pt;padding:14pt 20pt}
+  .msg{display:flex;flex-direction:column;gap:3pt}
+  .msg .from{font-size:8.5pt;font-weight:800;letter-spacing:0.1pt;display:flex;align-items:center;gap:6pt}
+  .msg .from .ar{opacity:0.5;font-weight:800}
+  .msg .from .who2{color:#A0A0B0;font-weight:700}
+  .msg .from .t{margin-left:auto;font-size:7.5pt;font-weight:600;color:#6B6B7B}
+  .msg .bubble{background:#1A1A2E;border-left:3pt solid #4ECDC4;border-radius:0 9pt 9pt 0;padding:7pt 12pt;font-size:10pt;font-weight:500;line-height:1.4}
+  .msg .bubble b{font-weight:800}
+  .budget .from{color:#E8FF3B}
+  .budget .bubble{border-left-color:#E8FF3B}
+  .budget .bubble b{color:#E8FF3B}
+  .rule .from{color:#4ECDC4}
+  .rule .bubble{border-left-color:#4ECDC4}
+  .rule .bubble b{color:#7BE8E0}
+  .perf .from{color:#FF6B9D}
+  .perf .bubble{border-left-color:#FF6B9D}
+  .perf .bubble b{color:#FFB3D1}
+  .synth{background:#E8FF3B;color:#1A1A2E;display:flex;align-items:center;gap:13pt;padding:11pt 22pt}
+  .synth .tag{font-size:8.5pt;font-weight:800;background:#1A1A2E;color:#E8FF3B;padding:4pt 10pt;border-radius:6pt;white-space:nowrap;flex-shrink:0}
+  .synth p{font-size:9.7pt;font-weight:600;line-height:1.4}
+  .synth p b{font-weight:800}
+  .synth p .k{background:#1A1A2E;color:#E8FF3B;padding:1pt 6pt;border-radius:4pt}
+</style>
+</head>
+<body>
+  <div class="cell head">
+    <h2>실습 — 팀원끼리 오간 실제 DM</h2>
+    <span class="num">08 / 11</span>
+  </div>
+
+  <div class="cell thread">
+    <div class="msg budget">
+      <div class="from">예산 <span class="ar">→</span> <span class="who2">성과</span><span class="t">02:23</span></div>
+      <div class="bubble">운영비 재원이 기획서에 안 보입니다(p.59-60). 사업 끝난 뒤 이 성과가 <b>3년 이상 갈까요?</b> 온두라스 자체 부담 역량은 보셨나요?</div>
+    </div>
+    <div class="msg perf">
+      <div class="from">성과 <span class="ar">→</span> <span class="who2">예산</span><span class="t">02:24</span></div>
+      <div class="bubble">운영비 없으면 → TTMS 중단으로 <b>성과 추적 불가</b>, 재교육 끊겨 역량 소실, 기자재도 '활용 불가'. 지표가 산출 중심이라 <b>위험 높음</b>.</div>
+    </div>
+    <div class="msg rule">
+      <div class="from">규정 <span class="ar">→</span> <span class="who2">예산</span><span class="t">02:23</span></div>
+      <div class="bubble">전문가 파견(p.67-71) — <b>인건비 산정</b>이 「전문인력 지침」 기준에 맞는지, PM·IC 예산 편성이 합리적인지 봐주세요.</div>
+    </div>
+    <div class="msg budget">
+      <div class="from">예산 <span class="ar">→</span> <span class="who2">규정</span><span class="t">02:24</span></div>
+      <div class="bubble">'전문가 파견'만 적혀 있고 <b>일당 단가가 아예 없습니다</b>. 기간만 있고 직급별 단가 불명확 → <b>총액 검증 불가</b>.</div>
+    </div>
+    <div class="msg rule">
+      <div class="from">규정 <span class="ar">→</span> <span class="who2">성과</span><span class="t">02:26</span></div>
+      <div class="bubble">단가 <b>필수 3요소(국제 일당·국내 일당·총액) 전부 부재</b> = 규정 필수요소 부재로 판정됩니다.</div>
+    </div>
+  </div>
+
+  <div class="cell synth">
+    <span class="tag">대화가 한 일</span>
+    <p>한 명의 발견이 <b>옆 사람의 질문</b>이 됐다 — 따로 검토했다면 안 만났을 두 결론: <span class="k">운영비 공백</span> · <span class="k">인건비 단가 미명시</span></p>
+  </div>
+</body>
+</html>

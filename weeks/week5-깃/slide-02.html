@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{width:720pt;height:405pt;font-family:'Inter','SF Pro',system-ui,-apple-system,sans-serif;background:#FFFFFF;color:#1A1A2E;display:grid;grid-template-columns:8pt 1fr;grid-template-rows:auto auto 1fr auto auto;gap:0;padding:0;overflow:hidden;position:relative}
+  .accent{grid-column:1;grid-row:1/6;background:#E8FF3B}
+  .head{grid-column:2;grid-row:1;display:flex;align-items:baseline;justify-content:space-between;padding:18pt 26pt 8pt;border-bottom:1pt solid #1A1A2E}
+  .head h2{font-size:22pt;font-weight:700;letter-spacing:-0.4pt;line-height:1.1}
+  .head .num{font-size:9.5pt;font-weight:600;letter-spacing:0.2pt;color:#1A1A2E;opacity:0.6}
+  .pain-intro{grid-column:2;grid-row:2;padding:12pt 26pt 4pt;font-size:11pt;font-weight:500;line-height:1.5;display:flex;align-items:center;gap:12pt}
+  .pain-intro .files{font-family:'SF Mono','Menlo',monospace;font-size:9.5pt;color:#1A1A2E;opacity:0.75;line-height:1.5}
+  .pain-intro .files s{opacity:0.55}
+  .pain-intro .arr{font-size:15pt;font-weight:800;color:#1A1A2E}
+  .pain-intro .git{font-weight:800;background:#1A1A2E;color:#E8FF3B;padding:3pt 10pt;border-radius:7pt;white-space:nowrap}
+  .cols{grid-column:2;grid-row:3;display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;padding:10pt 0 0}
+  .col{padding:12pt 22pt 8pt;border-right:1pt solid #E5E5E0;display:flex;flex-direction:column}
+  .col:last-child{border-right:none}
+  .col .tag{font-size:8.5pt;font-weight:700;letter-spacing:0.25pt;text-transform:uppercase;color:#1A1A2E;opacity:0.55;margin-bottom:6pt}
+  .col h3{font-size:21pt;font-weight:800;letter-spacing:-0.5pt;line-height:1;margin-bottom:9pt}
+  .col h3 .dot{display:inline-block;width:7pt;height:7pt;border-radius:50%;margin-left:4pt;vertical-align:middle}
+  .col .what{font-size:10.5pt;font-weight:500;line-height:1.45}
+  .col .what b{font-weight:700}
+  .c1 .dot{background:#4ECDC4}
+  .c2 .dot{background:#E8FF3B;border:1pt solid #1A1A2E}
+  .c3 .dot{background:#FF6B9D}
+  .filerow{grid-column:2;grid-row:4;background:#272729;color:#F8F8F2;padding:11pt 26pt;font-size:10pt;font-weight:500;line-height:1.45;display:flex;align-items:center;gap:14pt}
+  .filerow .lab{font-size:8.5pt;font-weight:800;letter-spacing:0.2pt;text-transform:uppercase;color:#E8FF3B;white-space:nowrap}
+  .filerow .ok{color:#4ECDC4;font-weight:700}
+  .filerow .no{color:#FF6B9D;font-weight:700}
+  .filerow code{font-family:'SF Mono','Menlo',monospace;font-size:9pt;background:rgba(255,255,255,0.1);padding:1pt 5pt;border-radius:3pt}
+  .one{grid-column:2;grid-row:5;background:#1A1A2E;color:#F8F8F2;padding:11pt 26pt;font-size:14pt;font-weight:700;letter-spacing:-0.2pt;display:flex;justify-content:space-between;align-items:center}
+  .one b{color:#E8FF3B}
+  .one .pg{font-size:9.5pt;font-weight:500;opacity:0.6}
+</style>
+</head>
+<body>
+  <div class="accent"></div>
+
+  <div class="head">
+    <h2>왜 git인가 — 버전 관리가 필요한 순간</h2>
+    <span class="num">02 / 07</span>
+  </div>
+
+  <div class="pain-intro">
+    <span class="files"><s>ktm_최종.py</s> · <s>ktm_최종_v3.py</s> · <s>ktm_최종_진짜최종.py</s></span>
+    <span class="arr">→</span>
+    <span class="git">git이 대신한다</span>
+  </div>
+
+  <div class="cols">
+    <div class="col c1">
+      <p class="tag">필요한 순간 01</p>
+      <h3>되돌리기<span class="dot"></span></h3>
+      <p class="what">잘못 고쳐도 <b>이전 버전으로</b> 한 번에. 망친 걸 손으로 복구할 필요 없음</p>
+    </div>
+    <div class="col c2">
+      <p class="tag">필요한 순간 02</p>
+      <h3>기록<span class="dot"></span></h3>
+      <p class="what">언제 · 무엇을 · 왜 바꿨는지 <b>모든 변경이 이력으로</b> 남는다</p>
+    </div>
+    <div class="col c3">
+      <p class="tag">필요한 순간 03</p>
+      <h3>실험<span class="dot"></span></h3>
+      <p class="what">지금 버전을 <b>망칠 걱정 없이</b> 새 시도. 안 되면 그냥 버리면 됨</p>
+    </div>
+  </div>
+
+  <div class="filerow">
+    <span class="lab">무엇을 담나</span>
+    <span><span class="ok">잘 맞음 ✓</span> 텍스트 파일 — <code>.py</code> <code>.md</code> 설정 (줄 단위로 무엇이 바뀌었는지 비교 가능)</span>
+    <span><span class="no">부적합 ✕</span> 바이너리 — <code>.png</code> <code>.pdf</code> <code>.xlsx</code> 이미지 (비교 안 되고 저장소만 무거워짐)</span>
+  </div>
+
+  <div class="one">
+    <span>git = 폴더의 <b>타임머신</b></span>
+    <span class="pg">ktm의 scripts · SKILL.md는 git이, 출력 png·보고서는 빼둔다 →</span>
+  </div>
+</body>
+</html>

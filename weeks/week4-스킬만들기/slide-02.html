@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{width:720pt;height:405pt;font-family:'Inter','SF Pro',system-ui,-apple-system,sans-serif;background:#FFFFFF;color:#1A1A2E;display:grid;grid-template-columns:8pt 1fr;grid-template-rows:auto 1fr auto auto;gap:0;padding:0;overflow:hidden;position:relative}
+  .accent{grid-column:1;grid-row:1/5;background:#E8FF3B}
+  .pad{padding:20pt 26pt}
+  .head{grid-column:2;grid-row:1;display:flex;align-items:baseline;justify-content:space-between;padding:18pt 26pt 8pt;border-bottom:1pt solid #1A1A2E}
+  .head h2{font-size:22pt;font-weight:700;letter-spacing:-0.4pt;line-height:1.1}
+  .head .num{font-size:9.5pt;font-weight:600;letter-spacing:0.2pt;color:#1A1A2E;opacity:0.6}
+  .cols{grid-column:2;grid-row:2;display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;padding:14pt 0 0}
+  .col{padding:14pt 22pt 10pt;border-right:1pt solid #E5E5E0;display:flex;flex-direction:column}
+  .col:last-child{border-right:none}
+  .col .tag{font-size:8.5pt;font-weight:700;letter-spacing:0.25pt;text-transform:uppercase;color:#1A1A2E;opacity:0.55;margin-bottom:6pt}
+  .col h3{font-size:22pt;font-weight:800;letter-spacing:-0.5pt;line-height:1;margin-bottom:10pt}
+  .col h3 .dot{display:inline-block;width:7pt;height:7pt;border-radius:50%;margin-left:4pt;vertical-align:middle}
+  .col .what{font-size:10.5pt;font-weight:500;line-height:1.45;margin-bottom:14pt;padding-bottom:10pt;border-bottom:1pt dashed rgba(26,26,46,0.2)}
+  .col .lab{font-size:8.5pt;font-weight:700;letter-spacing:0.15pt;text-transform:uppercase;opacity:0.55;margin-bottom:3pt}
+  .col .ex{font-size:10pt;line-height:1.45;margin-bottom:10pt}
+  .col .ex code{font-family:'SF Mono','Menlo',monospace;font-size:9pt;background:#F5F5F0;padding:1pt 5pt;border-radius:3pt}
+  .col .meta{font-size:10pt;font-style:italic;font-weight:500;line-height:1.4;color:#1A1A2E;opacity:0.75;margin-top:auto}
+  .one{grid-column:2;grid-row:3;background:#1A1A2E;color:#F8F8F2;padding:12pt 26pt;font-size:14pt;font-weight:700;letter-spacing:-0.2pt}
+  .one b{color:#E8FF3B}
+  .foot{grid-column:2;grid-row:4;display:flex;justify-content:space-between;align-items:center;padding:9pt 26pt;font-size:9.5pt;font-weight:500;color:#1A1A2E;opacity:0.7;letter-spacing:0.1pt}
+  .c1 .dot{background:#4ECDC4}
+  .c2 .dot{background:#E8FF3B;border:1pt solid #1A1A2E}
+  .c3 .dot{background:#FF6B9D}
+</style>
+</head>
+<body>
+  <div class="accent"></div>
+
+  <div class="head">
+    <h2>Claude 확장은 3종</h2>
+    <span class="num">02 / 07</span>
+  </div>
+
+  <div class="cols">
+    <div class="col c1">
+      <p class="tag">Type 01</p>
+      <h3>커넥터<span class="dot"></span></h3>
+      <p class="what">외부 도구·서비스 연결 (MCP 표준)</p>
+      <p class="lab">우리가 아는 것</p>
+      <p class="ex">koica-reg, SQLite, Word/PowerPoint, PDF</p>
+      <p class="meta">"손·발" — Claude가 외부와 닿는 통로</p>
+    </div>
+
+    <div class="col c2">
+      <p class="tag">Type 02 · 오늘</p>
+      <h3>스킬<span class="dot"></span></h3>
+      <p class="what">다단계 작업 절차 패키지 (SKILL.md)</p>
+      <p class="lab">오늘 만들 예시</p>
+      <p class="ex">ktm — 조회 + 키워드 분석 + 그래프 + 보고서</p>
+      <p class="meta">"일하는 방법" — 어떻게 시킬지</p>
+    </div>
+
+    <div class="col c3">
+      <p class="tag">Type 03</p>
+      <h3>플러그인<span class="dot"></span></h3>
+      <p class="what">스킬·명령어·훅·에이전트 묶음</p>
+      <p class="lab">이미 쓰는 것</p>
+      <p class="ex"><code>codex</code>, <code>anthropic-skills</code></p>
+      <p class="meta">"한 보따리" — 여러 스킬을 한 번에</p>
+    </div>
+  </div>
+
+  <div class="one">커넥터로 <b>닿고</b>, 스킬로 <b>묶고</b>, 플러그인으로 <b>모은다</b></div>
+
+  <div class="foot">
+    <span>3주차 = 외부 연결 체험 &nbsp;·&nbsp; 오늘 = 스킬</span>
+    <span>같은 데스크톱 앱 안 세 갈래</span>
+  </div>
+</body>
+</html>

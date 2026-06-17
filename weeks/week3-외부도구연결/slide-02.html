@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{width:720pt;height:405pt;font-family:'Inter','SF Pro',system-ui,-apple-system,sans-serif;background:#F8F8F2;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto 1fr auto;gap:10pt;padding:20pt;overflow:hidden}
+  .cell{border-radius:14pt;padding:18pt 22pt;overflow:hidden}
+  .head{grid-column:1/3;background:#1A1A2E;color:#F8F8F2;display:flex;align-items:center;justify-content:space-between}
+  .head .num{font-size:9.5pt;font-weight:600;color:#E8FF3B;letter-spacing:0.15pt}
+  .head h2{font-size:20pt;font-weight:600;letter-spacing:-0.3pt}
+  .way1{background:#E8FF3B;color:#1A1A2E;display:flex;flex-direction:column;justify-content:space-between}
+  .way2{background:#4ECDC4;color:#1A1A2E;display:flex;flex-direction:column;justify-content:space-between}
+  .badge{display:inline-block;background:#1A1A2E;color:#F8F8F2;font-size:9pt;font-weight:600;padding:3pt 10pt;border-radius:9999pt}
+  .way h3{font-size:18pt;font-weight:600;letter-spacing:-0.3pt;line-height:1.2;margin:10pt 0 8pt}
+  .way ul{list-style:none;font-size:11pt;line-height:1.6;font-weight:400}
+  .way li::before{content:"· ";font-weight:600}
+  .way .case{margin-top:14pt;padding-top:10pt;border-top:1pt solid rgba(26,26,46,0.25)}
+  .way .case-label{font-size:8pt;letter-spacing:0.1pt;text-transform:uppercase;font-weight:600;opacity:0.6;margin-bottom:2pt}
+  .way .case-name{font-size:13pt;font-weight:700}
+  .foot{grid-column:1/3;background:#FFE66D;color:#1A1A2E;font-size:9.5pt;font-weight:500;padding:10pt 22pt;border-radius:14pt}
+</style>
+</head>
+<body>
+  <div class="cell head">
+    <h2>외부 도구를 Claude에 붙이는 길은 두 갈래</h2>
+    <span class="num">02 / 10</span>
+  </div>
+  <div class="cell way way1">
+    <div>
+      <span class="badge">방식 ①</span>
+      <h3>Claude 앱에서<br>클릭 한 번</h3>
+      <ul>
+        <li>검증된 인기 도구</li>
+        <li>설정 → 커넥터 → 추가</li>
+      </ul>
+    </div>
+    <div class="case">
+      <p class="case-label">대표 사례</p>
+      <p class="case-name">Desktop Commander</p>
+      <p style="font-size:7.5pt;font-weight:500;line-height:1.3;opacity:0.6;margin-top:3pt;">채팅 탭이 파일·터미널 쓸 때 — 코드 탭엔 이미 내장</p>
+    </div>
+  </div>
+  <div class="cell way way2">
+    <div>
+      <span class="badge">방식 ②</span>
+      <h3>"이 주소 도구<br>설치해줘" + URL</h3>
+      <ul>
+        <li>최신·다양한 도구</li>
+        <li>Claude가 알아서 clone &amp; setup</li>
+      </ul>
+    </div>
+    <div class="case">
+      <p class="case-label">대표 사례</p>
+      <p class="case-name">koica-reg-mcp</p>
+    </div>
+  </div>
+  <div class="cell foot">※ 이런 연결 방식을 통칭해 MCP(Model Context Protocol)라 부릅니다</div>
+</body>
+</html>

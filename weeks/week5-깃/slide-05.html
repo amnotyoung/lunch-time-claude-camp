@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{width:720pt;height:405pt;font-family:'Inter','SF Pro',system-ui,-apple-system,sans-serif;background:#F8F8F2;display:grid;grid-template-columns:1.25fr 1fr;grid-template-rows:auto auto 1fr auto;gap:10pt;padding:20pt;overflow:hidden}
+  .cell{border-radius:14pt;padding:12pt 16pt;overflow:hidden}
+  .head{grid-column:1/3;background:#1A1A2E;color:#F8F8F2;display:flex;align-items:center;justify-content:space-between;padding:14pt 22pt}
+  .head .num{font-size:9.5pt;font-weight:600;color:#E8FF3B;letter-spacing:0.15pt}
+  .head h2{font-size:20pt;font-weight:600;letter-spacing:-0.3pt}
+  .input{background:#E8FF3B;color:#1A1A2E;display:flex;flex-direction:column;justify-content:center}
+  .input .lab{font-size:8.5pt;font-weight:700;letter-spacing:0.2pt;text-transform:uppercase;margin-bottom:5pt}
+  .input .quote{background:#1A1A2E;color:#E8FF3B;font-size:13.5pt;font-weight:700;line-height:1.25;padding:10pt 12pt;border-radius:8pt;letter-spacing:-0.3pt;margin-bottom:6pt}
+  .input .alt{font-size:8.7pt;line-height:1.5;font-weight:500}
+  .input .alt b{font-weight:700;display:block;margin-bottom:2pt}
+  .tip{background:#4ECDC4;color:#1A1A2E;display:flex;flex-direction:column;justify-content:center}
+  .tip .lab{font-size:8.5pt;font-weight:700;letter-spacing:0.2pt;text-transform:uppercase;margin-bottom:6pt}
+  .tip .quote{background:#1A1A2E;color:#4ECDC4;font-size:11pt;font-weight:700;line-height:1.3;padding:9pt 11pt;border-radius:8pt;letter-spacing:-0.2pt;margin-bottom:7pt}
+  .tip p{font-size:9pt;line-height:1.45;font-weight:500}
+  .tip p b{font-weight:700}
+  .timeline{grid-column:1/3;background:#FFFFFF;border:1.5pt solid #1A1A2E;display:grid;grid-template-columns:repeat(4,1fr);gap:0;align-items:stretch;padding:0;position:relative;overflow:hidden;border-radius:14pt}
+  .step{padding:10pt 12pt;display:flex;flex-direction:column;border-right:1pt dashed rgba(26,26,46,0.25);position:relative;min-height:0}
+  .step:last-child{border-right:none}
+  .step .stepno{display:inline-flex;align-items:center;justify-content:center;width:20pt;height:20pt;border-radius:50%;background:#1A1A2E;color:#E8FF3B;font-size:10pt;font-weight:800;margin-bottom:5pt;flex-shrink:0}
+  .step h4{font-size:10.5pt;font-weight:700;letter-spacing:-0.2pt;color:#1A1A2E;line-height:1.2;margin-bottom:3pt}
+  .step .say{font-size:8.5pt;font-weight:600;line-height:1.35;color:#1A1A2E;margin-bottom:5pt}
+  .step .say b{font-weight:700}
+  .step code{font-family:'SF Mono','Menlo',monospace;font-size:7.7pt;color:#1A1A2E;background:#F5F5F0;padding:1.5pt 5pt;border-radius:3pt;display:inline-block;line-height:1.3;align-self:flex-start;margin-top:auto}
+  .step.last{background:#FFE66D}
+  .step .arrow{position:absolute;right:-6pt;top:50%;transform:translateY(-50%);width:13pt;height:13pt;background:#1A1A2E;color:#E8FF3B;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:8pt;font-weight:700;z-index:2}
+  .step:last-child .arrow{display:none}
+  .foot{grid-column:1/3;background:#1A1A2E;color:#F8F8F2;font-size:9.5pt;font-weight:500;padding:10pt 22pt;border-radius:14pt;display:flex;justify-content:space-between;align-items:center}
+  .foot b{color:#E8FF3B;font-weight:700}
+</style>
+</head>
+<body>
+  <div class="cell head">
+    <h2>실습 — ktm을 더 개발하며 버전 남기기</h2>
+    <span class="num">05 / 07</span>
+  </div>
+
+  <div class="cell input">
+    <p class="lab">개선 발화 (예시)</p>
+    <div class="quote">"ktm 그래프 색 바꾸고<br>새 카테고리 추가해줘"</div>
+    <p class="alt"><b>고치고 → 저장 → 확인 → 되돌리기</b>· 한 바퀴 돌며 버전이 쌓이는 걸 직접 본다</p>
+  </div>
+
+  <div class="cell tip">
+    <p class="lab">Claude Code 커밋 팁</p>
+    <div class="quote">"주요 작업 할 때마다<br>안 시켜도 알아서 커밋해"</div>
+    <p class="say"><b>한 번 일러두면</b> 매번 "저장해줘" 안 해도 단계마다 자동으로 버전이 쌓인다</p>
+  </div>
+
+  <div class="cell timeline">
+    <div class="step">
+      <span class="stepno">1</span>
+      <h4>개선</h4>
+      <p class="say">ktm 한 군데 수정 — 그래프 색·새 category</p>
+      <code>scripts 수정</code>
+      <div class="arrow">›</div>
+    </div>
+    <div class="step">
+      <span class="stepno">2</span>
+      <h4>저장 (커밋)</h4>
+      <p class="say">"방금 바꾼 거 <b>저장해줘</b>"</p>
+      <code>git commit</code>
+      <div class="arrow">›</div>
+    </div>
+    <div class="step">
+      <span class="stepno">3</span>
+      <h4>이력 확인</h4>
+      <p class="say">"지금까지 <b>뭐 바꿨는지</b> 보여줘"</p>
+      <code>git log</code>
+      <div class="arrow">›</div>
+    </div>
+    <div class="step last">
+      <span class="stepno">4</span>
+      <h4>되돌리기</h4>
+      <p class="say">"<b>아까 버전으로</b> 되돌려줘"</p>
+      <code>git restore / revert</code>
+    </div>
+  </div>
+
+  <div class="cell foot">
+    <span><b>한 줄 발화 → 버전으로 안전하게 누적</b></span>
+    <span>망쳐도 되돌릴 수 있으니 <b>마음껏 고친다</b></span>
+  </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{width:720pt;height:405pt;font-family:'Inter','SF Pro',system-ui,-apple-system,sans-serif;background:#F8F8F2;display:grid;grid-template-columns:1.3fr 1fr;grid-template-rows:auto 1fr 1fr auto;gap:10pt;padding:20pt;overflow:hidden}
+  .cell{border-radius:14pt;padding:16pt 20pt;overflow:hidden}
+  .head{grid-column:1/3;background:#1A1A2E;color:#F8F8F2;display:flex;align-items:center;justify-content:space-between;padding:14pt 22pt}
+  .head .num{font-size:9.5pt;font-weight:600;color:#E8FF3B;letter-spacing:0.15pt}
+  .head h2{font-size:20pt;font-weight:600;letter-spacing:-0.3pt}
+  .anchor{grid-row:2/4;background:#1A1A2E;color:#F8F8F2;display:flex;flex-direction:column;justify-content:space-between}
+  .anchor .lab{font-size:8.5pt;letter-spacing:0.2pt;text-transform:uppercase;font-weight:700;color:#E8FF3B;margin-bottom:8pt}
+  .anchor h3{font-size:15.5pt;font-weight:700;letter-spacing:-0.3pt;line-height:1.3;margin-bottom:6pt}
+  .anchor h3 b{color:#E8FF3B}
+  .flowq{background:#0F0F1A;border-radius:9pt;padding:11pt 13pt}
+  .flowq .me{font-size:11.5pt;font-weight:800;color:#FFB3D1;letter-spacing:-0.2pt}
+  .flowq .me small{display:block;font-size:8pt;font-weight:600;color:#A0A0B0;margin-top:1pt}
+  .flowq .ar{font-size:9pt;font-weight:700;color:#E8FF3B;margin:6pt 0;letter-spacing:-0.1pt}
+  .flowq .out{display:flex;gap:5pt}
+  .flowq .out span{font-size:9.5pt;font-weight:800;padding:4pt 9pt;border-radius:6pt;background:#1A1A2E}
+  .flowq .out .a{color:#E8FF3B}
+  .flowq .out .b{color:#4ECDC4}
+  .flowq .out .c{color:#FFB3D1}
+  .anchor .note{font-size:9pt;color:#A0A0B0;line-height:1.4;margin-top:8pt}
+  .anchor .note b{color:#E8FF3B;font-weight:700}
+  .tile{display:flex;flex-direction:column;justify-content:center}
+  .tile .tag{font-size:8pt;font-weight:700;letter-spacing:0.25pt;text-transform:uppercase;opacity:0.6;margin-bottom:5pt}
+  .tile h4{font-size:14pt;font-weight:800;letter-spacing:-0.3pt;margin-bottom:5pt;line-height:1.1}
+  .tile p{font-size:9.5pt;font-weight:500;line-height:1.4}
+  .tile p b{font-weight:800}
+  .y{background:#E8FF3B;color:#1A1A2E}
+  .c{background:#FFE66D;color:#1A1A2E}
+  .foot{grid-column:1/3;background:#4ECDC4;color:#1A1A2E;font-size:9.5pt;font-weight:500;padding:10pt 22pt;border-radius:14pt;display:flex;justify-content:space-between;align-items:center}
+  .foot b{font-weight:700}
+</style>
+</head>
+<body>
+  <div class="cell head">
+    <h2>역할 분배(R&amp;R)는 팀장이 알아서</h2>
+    <span class="num">06 / 11</span>
+  </div>
+
+  <div class="cell anchor">
+    <div>
+      <p class="lab">운용의 핵심</p>
+      <h3>역할이 <b>뚜렷할수록</b> 결과가 좋다 —<br>그 분배는 <b>팀장(메인)이 알아서</b> 한다</h3>
+    </div>
+    <div class="flowq">
+      <div class="me">"이 자료 팀으로 검토해줘"<small>동료는 이 한마디면 끝</small></div>
+      <div class="ar">↓ 팀장이 알아서 역할을 나눔</div>
+      <div class="out"><span class="a">예산</span><span class="b">규정</span><span class="c">성과</span> 담당</div>
+    </div>
+    <p class="note">더 통제하고 싶으면 <b>"예산·규정·성과로 나눠"</b>처럼 짚어줄 수도 — 안 짚어도 됨</p>
+  </div>
+
+  <div class="cell tile y">
+    <p class="tag">좋은 R&amp;R의 조건</p>
+    <h4>독립적 · 경계가 분명</h4>
+    <p>역할이 <b>겹치면 중복</b>, 서로 <b>의존하면 순차</b>가 된다 — 따로 떼어도 되는 일을 나눈다</p>
+  </div>
+  <div class="cell tile c">
+    <p class="tag">곁다리</p>
+    <h4>자주 쓰는 역할은 저장</h4>
+    <p>반복하는 역할은 <b>'나만의 에이전트'</b>로 저장해 재사용 — week4 <b>스킬</b>과 같은 결</p>
+  </div>
+
+  <div class="cell foot">
+    <span>동료는 <b>큰 그림만</b> — 분배·실행은 팀이 알아서</span>
+    <span>다음 장에서 <b>직접 돌려본다</b> →</span>
+  </div>
+</body>
+</html>

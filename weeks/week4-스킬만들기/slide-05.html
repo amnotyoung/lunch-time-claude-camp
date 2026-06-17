@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{width:720pt;height:405pt;font-family:'Inter','SF Pro',system-ui,-apple-system,sans-serif;background:#F8F8F2;display:grid;grid-template-columns:1.25fr 1fr;grid-template-rows:auto auto 1fr auto;gap:10pt;padding:20pt;overflow:hidden}
+  .cell{border-radius:14pt;padding:12pt 16pt;overflow:hidden}
+  .head{grid-column:1/3;background:#1A1A2E;color:#F8F8F2;display:flex;align-items:center;justify-content:space-between;padding:14pt 22pt}
+  .head .num{font-size:9.5pt;font-weight:600;color:#E8FF3B;letter-spacing:0.15pt}
+  .head h2{font-size:20pt;font-weight:600;letter-spacing:-0.3pt}
+  .input{background:#E8FF3B;color:#1A1A2E;display:flex;flex-direction:column;justify-content:center}
+  .input .lab{font-size:8.5pt;font-weight:700;letter-spacing:0.2pt;text-transform:uppercase;margin-bottom:5pt}
+  .input .quote{background:#1A1A2E;color:#E8FF3B;font-size:14pt;font-weight:700;line-height:1.2;padding:10pt 12pt;border-radius:8pt;letter-spacing:-0.3pt;margin-bottom:6pt}
+  .input .alt{font-size:8.7pt;line-height:1.5;font-weight:500}
+  .input .alt b{font-weight:700;display:block;margin-bottom:2pt}
+  .map{background:#4ECDC4;color:#1A1A2E;display:flex;flex-direction:column;justify-content:center}
+  .map .lab{font-size:8.5pt;font-weight:700;letter-spacing:0.2pt;text-transform:uppercase;margin-bottom:5pt}
+  .map table{font-size:8.7pt;line-height:1.4;border-collapse:collapse;width:100%}
+  .map td{padding:1pt 0}
+  .map td:first-child{font-weight:700;white-space:nowrap;padding-right:8pt}
+  .map td code{font-family:'SF Mono','Menlo',monospace;font-size:8.2pt;background:rgba(26,26,46,0.12);padding:1pt 4pt;border-radius:3pt}
+  .timeline{grid-column:1/3;background:#FFFFFF;border:1.5pt solid #1A1A2E;display:grid;grid-template-columns:repeat(4,1fr);gap:0;align-items:stretch;padding:0;position:relative;overflow:hidden;border-radius:14pt}
+  .step{padding:10pt 12pt;display:flex;flex-direction:column;border-right:1pt dashed rgba(26,26,46,0.25);position:relative;min-height:0}
+  .step:last-child{border-right:none}
+  .step .stepno{display:inline-flex;align-items:center;justify-content:center;width:20pt;height:20pt;border-radius:50%;background:#1A1A2E;color:#E8FF3B;font-size:10pt;font-weight:800;margin-bottom:5pt;flex-shrink:0}
+  .step h4{font-size:10.5pt;font-weight:700;letter-spacing:-0.2pt;color:#1A1A2E;line-height:1.2;margin-bottom:3pt}
+  .step p{font-size:8.5pt;font-weight:500;line-height:1.35;color:#1A1A2E;opacity:0.78;margin-bottom:5pt}
+  .step code{font-family:'SF Mono','Menlo',monospace;font-size:7.7pt;color:#1A1A2E;background:#F5F5F0;padding:1.5pt 5pt;border-radius:3pt;display:inline-block;line-height:1.3;align-self:flex-start;margin-top:auto}
+  .step.last{background:#FFE66D}
+  .step .arrow{position:absolute;right:-6pt;top:50%;transform:translateY(-50%);width:13pt;height:13pt;background:#1A1A2E;color:#E8FF3B;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:8pt;font-weight:700;z-index:2}
+  .step:last-child .arrow{display:none}
+  .foot{grid-column:1/3;background:#1A1A2E;color:#F8F8F2;font-size:9.5pt;font-weight:500;padding:10pt 22pt;border-radius:14pt;display:flex;justify-content:space-between;align-items:center}
+  .foot b{color:#E8FF3B;font-weight:700}
+  .foot code{font-family:'SF Mono','Menlo',monospace;font-size:8.7pt;background:#0F0F1A;padding:1pt 6pt;border-radius:4pt;color:#E8FF3B}
+</style>
+</head>
+<body>
+  <div class="cell head">
+    <h2>자연어 한 줄 → 4단계 자동 (보고서까지)</h2>
+    <span class="num">05 / 07</span>
+  </div>
+
+  <div class="cell input">
+    <p class="lab">대표 발화</p>
+    <div class="quote">"인사규정 핵심<br>보고서 만들어줘"</div>
+    <p class="alt"><b>다른 표현도 OK</b>· "회계 규정 텍스트마이닝 보고서"<br>· "사업 분야 핵심 키워드 보고서"<br>· "파트너십 규정 분석 정리해줘"</p>
+  </div>
+
+  <div class="cell map">
+    <p class="lab">카테고리 자동 인식</p>
+    <table>
+      <tr><td>인사 ·</td><td><code>hr</code></td></tr>
+      <tr><td>회계 ·</td><td><code>finance</code></td></tr>
+      <tr><td>사업 ·</td><td><code>project</code></td></tr>
+      <tr><td>파트너십 ·</td><td><code>partnership</code></td></tr>
+      <tr><td>법무 ·</td><td><code>law</code></td></tr>
+      <tr><td>봉사단 ·</td><td><code>volunteer</code></td></tr>
+      <tr><td>경영 ·</td><td><code>management</code></td></tr>
+    </table>
+  </div>
+
+  <div class="cell timeline">
+    <div class="step">
+      <span class="stepno">1</span>
+      <h4>조회</h4>
+      <p>koica-reg에서 카테고리 조문</p>
+      <code>fetch.py → docs.json</code>
+      <div class="arrow">›</div>
+    </div>
+    <div class="step">
+      <span class="stepno">2</span>
+      <h4>키워드 마이닝</h4>
+      <p>TF-IDF로 상위 키워드</p>
+      <code>mine.py → keywords.csv</code>
+      <div class="arrow">›</div>
+    </div>
+    <div class="step">
+      <span class="stepno">3</span>
+      <h4>시각화</h4>
+      <p>막대그래프 + 워드클라우드</p>
+      <code>viz.py → *.png</code>
+      <div class="arrow">›</div>
+    </div>
+    <div class="step last">
+      <span class="stepno">4</span>
+      <h4>보고서 생성</h4>
+      <p>키워드·그래프·요약을 한 장에</p>
+      <code>report.py → *_report.md</code>
+    </div>
+  </div>
+
+  <div class="cell foot">
+    <span><b>한 줄 발화 → 보고서까지 자동</b></span>
+    <span><b>Codex / Antigravity</b>에서도 같은 폴더 그대로 작동</span>
+  </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{width:720pt;height:405pt;font-family:'Inter','SF Pro',system-ui,-apple-system,sans-serif;background:#F8F8F2;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;grid-template-rows:auto 1fr auto;gap:10pt;padding:20pt;overflow:hidden}
+  .cell{border-radius:14pt;padding:16pt 18pt;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between}
+  .head{grid-column:1/5;background:#1A1A2E;color:#F8F8F2;flex-direction:row;align-items:center;justify-content:space-between;padding:14pt 22pt}
+  .head .num{font-size:9.5pt;font-weight:600;color:#E8FF3B}
+  .head h2{font-size:18pt;font-weight:600;letter-spacing:-0.3pt}
+  .tile .label{font-size:7.5pt;letter-spacing:0.2pt;font-weight:700;text-transform:uppercase;opacity:0.7;margin-bottom:6pt}
+  .tile h3{font-size:18pt;font-weight:700;letter-spacing:-0.3pt;margin-bottom:8pt}
+  .tile p{font-size:10pt;line-height:1.4}
+  .tile.t1{background:#E8FF3B;color:#1A1A2E}
+  .tile.t2{background:#FF6B6B;color:#F8F8F2}
+  .tile.t3{background:#4ECDC4;color:#1A1A2E}
+  .tile.t4{background:#FFE66D;color:#1A1A2E}
+  .foot{grid-column:1/5;background:#1A1A2E;color:#F8F8F2;flex-direction:row;align-items:center;justify-content:space-between;padding:14pt 22pt}
+  .foot .msg{font-size:14pt;font-weight:600;letter-spacing:-0.2pt}
+  .foot .hint{font-size:10pt;color:#4ECDC4;font-weight:500}
+</style>
+</head>
+<body>
+  <div class="cell head">
+    <h2>같은 패턴으로 연결되는 도구들</h2>
+    <span class="num">08 / 10</span>
+  </div>
+  <div class="cell tile t1">
+    <div>
+      <p class="label">Database</p>
+      <h3>sqlite</h3>
+    </div>
+    <p>로컬 DB 직접 다루기</p>
+  </div>
+  <div class="cell tile t2">
+    <div>
+      <p class="label">Research</p>
+      <h3>zotero</h3>
+    </div>
+    <p>학술 문헌 관리</p>
+  </div>
+  <div class="cell tile t3">
+    <div>
+      <p class="label">Voice</p>
+      <h3>tiro</h3>
+    </div>
+    <p>음성 → 텍스트, 회의록</p>
+  </div>
+  <div class="cell tile t4">
+    <div>
+      <p class="label">Slides</p>
+      <h3>slides-grab</h3>
+    </div>
+    <p>슬라이드 자동 제작<br><span style="opacity:0.7;font-size:9pt">— 이 슬라이드도 이걸로 빌드</span></p>
+  </div>
+  <div class="cell foot">
+    <span class="msg">한 패턴을 익히면 생태계 전체가 열린다</span>
+    <span class="hint">본인 분야 도구도 GitHub에 있으면 같은 방식으로 →</span>
+  </div>
+</body>
+</html>

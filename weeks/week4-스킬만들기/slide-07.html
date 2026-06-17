@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{width:720pt;height:405pt;font-family:'Inter','SF Pro',system-ui,-apple-system,sans-serif;background:#000000;color:#F8F8F2;display:grid;grid-template-columns:1.5fr 1fr;grid-template-rows:auto 1fr;gap:10pt;padding:20pt;overflow:hidden}
+  .cell{border-radius:14pt;padding:20pt 24pt;overflow:hidden}
+  .head{grid-column:1/3;background:#1A1A2E;color:#F8F8F2;display:flex;align-items:center;justify-content:space-between;padding:14pt 22pt}
+  .head .num{font-size:9.5pt;font-weight:600;color:#E8FF3B;letter-spacing:0.15pt}
+  .head h2{font-size:20pt;font-weight:600;letter-spacing:-0.3pt}
+  .anchor{background:#0F0F1A;color:#F8F8F2;display:flex;flex-direction:column;justify-content:space-between}
+  .anchor .lab{font-size:10pt;letter-spacing:0.15pt;text-transform:uppercase;font-weight:700;color:#E8FF3B;margin-bottom:10pt}
+  .anchor h3{font-size:24pt;font-weight:700;letter-spacing:-0.5pt;line-height:1.18;margin-bottom:10pt}
+  .anchor h3 small{display:block;font-size:11pt;font-weight:500;letter-spacing:-0.2pt;margin-top:6pt;color:#A0A0B0}
+  .anchor .why{font-size:11pt;color:#F8F8F2;line-height:1.5;padding:11pt 13pt;background:#1A1A2E;border-radius:10pt;border-left:3pt solid #E8FF3B;margin-bottom:8pt}
+  .anchor .why b{color:#E8FF3B;font-weight:700}
+  .anchor .smp{font-size:9.5pt;color:#A0A0B0;line-height:1.45}
+  .anchor .smp b{color:#E8FF3B;font-weight:700}
+  .next{background:#E8FF3B;color:#1A1A2E;display:flex;flex-direction:column;justify-content:space-between;padding:24pt 26pt}
+  .next .week{font-size:10pt;letter-spacing:0.2pt;text-transform:uppercase;font-weight:700;opacity:0.7;margin-bottom:8pt}
+  .next h4{font-size:30pt;font-weight:800;letter-spacing:-0.6pt;line-height:1.08;margin-bottom:12pt}
+  .next .desc{font-size:12pt;line-height:1.45;font-weight:500}
+  .next .desc b{font-weight:700}
+  .next .tag{display:inline-block;background:#1A1A2E;color:#E8FF3B;font-size:9pt;font-weight:700;padding:4pt 10pt;border-radius:6pt;margin-top:14pt;letter-spacing:0.1pt}
+</style>
+</head>
+<body>
+  <div class="cell head">
+    <h2>오늘 가져갈 것 — ktm이 아니라 "만드는 법"</h2>
+    <span class="num">07 / 07</span>
+  </div>
+
+  <div class="cell anchor">
+    <div>
+      <p class="lab">Today</p>
+      <h3>나만의 스킬<br>만드는 법 익힘 ✓<small>예시 스킬: ktm</small></h3>
+    </div>
+    <div class="why">
+      ktm은 실습 이후엔 안 쓸 수도 있다. <b>중요한 건 만들 줄 안다는 것</b> — 동료 자신의 반복 업무도 같은 방식으로 스킬화.
+    </div>
+    <p class="smp"><b>skillsmp.com 둘러보기</b> — 다른 분들이 올려둔 스킬을 구경하며 다음 아이디어 한 개씩 챙겨가기</p>
+  </div>
+
+  <div class="cell next">
+    <div>
+      <p class="week">다음 주차 · 6월08일주</p>
+      <h4>깃(Git)이란<br>무엇인가</h4>
+      <p class="desc">오늘 만든 스킬을 <b>git으로 버전 관리</b>. 변경 이력 남기고 안전하게 되돌리기.</p>
+    </div>
+    <span class="tag">이어서 받는 누적 흐름</span>
+  </div>
+</body>
+</html>

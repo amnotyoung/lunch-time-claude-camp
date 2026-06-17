@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{width:720pt;height:405pt;font-family:'Inter','SF Pro',system-ui,-apple-system,sans-serif;background:#F8F8F2;display:grid;grid-template-columns:1.4fr 1fr;grid-template-rows:auto 1fr 1fr;gap:10pt;padding:20pt;overflow:hidden}
+  .cell{border-radius:14pt;padding:18pt 22pt;overflow:hidden}
+  .head{grid-column:1/3;background:#1A1A2E;color:#F8F8F2;display:flex;align-items:center;justify-content:space-between;padding:14pt 22pt}
+  .head .num{font-size:9.5pt;font-weight:600;color:#E8FF3B}
+  .head h2{font-size:18pt;font-weight:600;letter-spacing:-0.3pt}
+  .main{grid-row:2/4;background:#E8FF3B;color:#1A1A2E;display:flex;flex-direction:column;justify-content:center}
+  .main .label{font-size:8.5pt;letter-spacing:0.2pt;font-weight:700;text-transform:uppercase;margin-bottom:10pt}
+  .main h3{font-size:21pt;font-weight:600;letter-spacing:-0.4pt;line-height:1.2;margin-bottom:14pt}
+  .main p{font-size:11pt;line-height:1.5;margin-bottom:14pt}
+  .main .cmd{background:#1A1A2E;color:#E8FF3B;font-family:'SF Mono',Menlo,monospace;font-size:11pt;padding:12pt 14pt;border-radius:8pt;line-height:1.5}
+  .main .os{font-size:9pt;color:#1A1A2E;opacity:0.7;margin-top:8pt;margin-bottom:0}
+  .why{background:#FF6B6B;color:#F8F8F2;display:flex;flex-direction:column;justify-content:center}
+  .why .label{font-size:8pt;letter-spacing:0.15pt;font-weight:700;text-transform:uppercase;opacity:0.85;margin-bottom:6pt}
+  .why h4{font-size:13pt;font-weight:600;letter-spacing:-0.2pt;line-height:1.3;margin-bottom:6pt}
+  .why p{font-size:10pt;line-height:1.4}
+  .check{background:#4ECDC4;color:#1A1A2E;display:flex;flex-direction:column;justify-content:center}
+  .check .label{font-size:8pt;letter-spacing:0.15pt;font-weight:700;text-transform:uppercase;margin-bottom:6pt}
+  .check .quote{font-size:11pt;font-weight:600;font-style:italic;margin-bottom:6pt}
+  .check .out{font-family:'SF Mono',Menlo,monospace;font-size:10pt;font-weight:600}
+</style>
+</head>
+<body>
+  <div class="cell head">
+    <h2>코드 탭으로 Python 한 줄 설치</h2>
+    <span class="num">04 / 10</span>
+  </div>
+  <div class="cell main">
+    <p class="label">한 줄이면 끝</p>
+    <h3>코드 탭이라면<br>Python 설치도 한 줄</h3>
+    <div class="cmd">"python 설치해줘"</div>
+    <p class="os">코드 탭이 OS(Win / Mac) 맞춰 알아서 처리</p>
+  </div>
+  <div class="cell why">
+    <p class="label">왜 깔아두나</p>
+    <h4>다음 주 "스킬"의 재료</h4>
+    <p>스킬다운 스킬엔 코드 실행이 필요 — Python이 가장 보편</p>
+  </div>
+  <div class="cell check">
+    <p class="label">설치 확인</p>
+    <p class="quote">"python 버전 확인해줘"</p>
+    <p class="out">→ Python 3.x.x</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{width:720pt;height:405pt;font-family:'Inter','SF Pro',system-ui,-apple-system,sans-serif;background:#1d1d1f;color:#F8F8F2;display:grid;grid-template-columns:1.35fr 1fr;grid-template-rows:auto 1fr auto;gap:10pt;padding:20pt;overflow:hidden}
+  .cell{border-radius:14pt;padding:16pt 20pt;overflow:hidden}
+  .head{grid-column:1/3;background:#1A1A2E;color:#F8F8F2;display:flex;align-items:center;justify-content:space-between;padding:14pt 22pt}
+  .head .num{font-size:9.5pt;font-weight:600;color:#E8FF3B;letter-spacing:0.15pt}
+  .head h2{font-size:20pt;font-weight:600;letter-spacing:-0.3pt}
+  .map{background:#F8F8F2;color:#1A1A2E;display:flex;flex-direction:column;justify-content:center}
+  .map .lab{font-size:8.5pt;font-weight:700;letter-spacing:0.2pt;text-transform:uppercase;opacity:0.55;margin-bottom:6pt}
+  .map table{width:100%;border-collapse:collapse}
+  .map tr{border-bottom:1pt solid #E5E5E0}
+  .map tr:last-child{border-bottom:none}
+  .map td{padding:7pt 0;vertical-align:middle}
+  .map td.say{font-size:11pt;font-weight:700;letter-spacing:-0.2pt}
+  .map td.arr{width:22pt;text-align:center;font-size:11pt;font-weight:800;opacity:0.4}
+  .map td.cmd{text-align:right;white-space:nowrap}
+  .map td.cmd code{font-size:8.7pt;background:#1A1A2E;color:#E8FF3B;padding:2pt 7pt;border-radius:5pt;font-weight:600}
+  .when{background:#E8FF3B;color:#1A1A2E;display:flex;flex-direction:column;justify-content:center;gap:8pt}
+  .when .blk .t{font-size:9.5pt;font-weight:800;letter-spacing:0.1pt;margin-bottom:3pt;display:flex;align-items:center;gap:5pt}
+  .when .blk p{font-size:9.3pt;font-weight:500;line-height:1.38}
+  .when .blk p b{font-weight:800}
+  .when .blk+.blk{border-top:1.5pt solid rgba(26,26,46,0.22);padding-top:8pt}
+  .caution{grid-column:1/3;background:#FF6B9D;color:#1A1A2E;font-size:9.3pt;font-weight:500;padding:10pt 20pt;border-radius:14pt;display:flex;align-items:center;gap:14pt;line-height:1.35}
+  .caution .tag{font-size:9pt;font-weight:800;background:#1A1A2E;color:#FF6B9D;padding:3pt 10pt;border-radius:6pt;white-space:nowrap}
+  .caution .it{display:flex;gap:6pt}
+  .caution .n{font-weight:800}
+  .caution b{font-weight:800}
+  .caution .sep{opacity:0.4;font-weight:800}
+</style>
+</head>
+<body>
+  <div class="cell head">
+    <h2>이 말 몇 개면 충분 — 언제 팀, 언제 혼자</h2>
+    <span class="num">09 / 11</span>
+  </div>
+
+  <div class="cell map">
+    <p class="lab">동료의 말 → 뒤에서 도는 운용</p>
+    <table>
+      <tr><td class="say">"검토팀으로 나눠 봐줘"</td><td class="arr">→</td><td class="cmd"><code>팀 구성 + 분담</code></td></tr>
+      <tr><td class="say">"이건 ○○ 담당, 저건 □□ 담당"</td><td class="arr">→</td><td class="cmd"><code>R&amp;R 지정</code></td></tr>
+      <tr><td class="say">"팀원끼리 의논해서"</td><td class="arr">→</td><td class="cmd"><code>소통형 팀</code></td></tr>
+      <tr><td class="say">"결과만 합쳐서 보여줘"</td><td class="arr">→</td><td class="cmd"><code>종합 보고</code></td></tr>
+    </table>
+  </div>
+
+  <div class="cell when">
+    <div class="blk">
+      <div class="t">🟢 분담이면 충분</div>
+      <p>서로 <b>독립적</b>인 일 — 결과만 모으면 될 때 <b>(설정 불필요)</b></p>
+    </div>
+    <div class="blk">
+      <div class="t">🔵 소통형 팀</div>
+      <p>팀원끼리 <b>의논·교차 검토·상호 검증</b>이 필요할 때 <b>(설정 필요)</b></p>
+    </div>
+    <div class="blk">
+      <div class="t">🙋 혼자</div>
+      <p>짧은 일 · <b>순차</b> 작업 · 같은 파일 동시수정</p>
+    </div>
+  </div>
+
+  <div class="cell caution">
+    <span class="tag">주의</span>
+    <span class="it"><span class="n">①</span> 역할 없이 늘리면 <b>중복·느려짐</b></span>
+    <span class="sep">·</span>
+    <span class="it"><span class="n">②</span> 기준 없으면 <b>제각각</b> (→ CLAUDE.md)</span>
+    <span class="sep">·</span>
+    <span class="it"><span class="n">③</span> 팀은 공짜가 아님 — <b>많을수록 조율·토큰 비용 ↑</b></span>
+  </div>
+</body>
+</html>
