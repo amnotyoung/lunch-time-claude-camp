@@ -21,3 +21,12 @@ tools/
 # 슬라이드 합본 뷰어 (빌드 산출물 — slide-*.html이 정본)
 **/viewer.html
 **/_preview.html
+
+# 제작 중간물 / 미사용 (오픈소스 자료에서 제외 — 디스크엔 보존)
+outputs/
+*.rtf
+weeks/*/DESIGN.md
+weeks/*/PLAN.md
+weeks/week1-클로드채팅vs코드/수정가이드라인.md
+weeks/week3-외부도구연결/koica-text-mining/
+.claude/skills/ktm/outputs/

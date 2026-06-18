@@ -19,8 +19,7 @@
 ## 폴더 구조
 
 - `weeks/` — 주차별 슬라이드(`slide-*.html`)와 설계 아웃라인(`slide-outline.md`)
-- `.claude/skills/ktm/` — 캠프에서 만든 자체 스킬: KOICA 규정 텍스트마이닝 (조회 → 키워드 → 그래프 → 보고서)
-- `outputs/` — ktm 스킬 예시 산출물
+- `.claude/skills/ktm/` — 캠프에서 만든 자체 스킬: KOICA 규정 텍스트마이닝 (조회 → 키워드 → 그래프 → 보고서). 예시 산출물은 `examples/hr_sample/`
 - `references/` — 커리큘럼 등 참고 자료
 
 > 슬라이드는 HTML 소스로 관리합니다. 발표용 PDF·배포용 zip은 저장소에 포함하지 않습니다.
