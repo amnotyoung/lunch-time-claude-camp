@@ -13,12 +13,13 @@
 | 4 | 5월 25일주 | 나만의 스킬을 만들어보자 (ktm) | [week4](weeks/week4-스킬만들기/) |
 | 5 | 6월 8일주 | 깃(Git)이란 무엇인가 | [week5](weeks/week5-깃/) |
 | 6 | 6월 15일주 | 에이전트와 서브 에이전트 | [week6](weeks/week6-에이전트팀/) |
-| 7 | 6월 22일주 | 깃허브(GitHub)란 무엇인가 | _(예정)_ |
-| 8 | 6월 29일주 | 클로드와 챗지피티를 협업시켜보자 | _(예정)_ |
+| 7 | 6월 22일주 | 깃허브(GitHub)란 무엇인가 | [week7](weeks/week7-깃허브/) |
+| 8 | 6월 29일주 | 클로드와 챗지피티를 협업시켜보자 | [week8](weeks/week8-AI협업/) |
 
 ## 폴더 구조
 
 - `weeks/` — 주차별 슬라이드(`slide-*.html`)와 설계 아웃라인(`slide-outline.md`)
+- `AGENTS.md` — 8주차 실습에서 코덱스(Codex)의 GitHub 자동 리뷰가 따르는 기준. week6의 `CLAUDE.md`(클로드 팀 공통 기준)와 대칭
 - `.claude/skills/ktm/` — 캠프에서 만든 자체 스킬: KOICA 규정 텍스트마이닝 (조회 → 키워드 → 그래프 → 보고서). 예시 산출물은 `examples/hr_sample/`
 - `references/` — 커리큘럼 등 참고 자료
 
