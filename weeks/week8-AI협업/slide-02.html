@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{width:720pt;height:405pt;font-family:'Inter','SF Pro',system-ui,-apple-system,sans-serif;background:#F8F8F2;display:grid;grid-template-columns:1.7fr 1fr;grid-template-rows:1fr auto;gap:10pt;padding:20pt;overflow:hidden}
+  .cell{border-radius:14pt;padding:30pt;overflow:hidden}
+  .hero{background:#1A1A2E;color:#F8F8F2;display:flex;flex-direction:column;justify-content:center}
+  .hero .lab{font-size:10pt;font-weight:700;letter-spacing:0.2pt;text-transform:uppercase;color:#E8FF3B;margin-bottom:16pt}
+  .hero h1{font-size:38pt;font-weight:800;letter-spacing:-1pt;line-height:1.14;margin-bottom:16pt}
+  .hero h1 b{color:#E8FF3B}
+  .hero p{font-size:12.5pt;font-weight:400;color:#A0A0B0;line-height:1.5}
+  .count{background:#E8FF3B;color:#1A1A2E;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:26pt}
+  .count .big{font-size:66pt;font-weight:800;letter-spacing:-3pt;line-height:1}
+  .count .cl{font-size:12.5pt;font-weight:700;margin-top:8pt;line-height:1.35}
+  .foot{grid-column:1/3;background:#FFE66D;color:#1A1A2E;font-size:12pt;font-weight:600;padding:13pt 24pt;border-radius:14pt;display:flex;align-items:center;justify-content:space-between}
+  .foot b{font-weight:800}
+  .foot .r{font-size:10pt;font-weight:700;opacity:0.55}
+</style>
+</head>
+<body>
+  <div class="cell hero">
+    <p class="lab">오늘은 마지막 시간</p>
+    <h1>먼저, 지난 7주를<br><b>한 장씩</b> 돌아봅니다</h1>
+    <p>채팅과 코드의 차이부터 GitHub 협업까지 — 8주를 빠르게 복습</p>
+  </div>
+  <div class="cell count">
+    <span class="big">7</span>
+    <span class="cl">주 = 7장<br>한 주에 한 장</span>
+  </div>
+  <div class="cell foot">
+    <span>기억나시죠? — 빠르게 넘기며 <b>큰 그림</b>만 다시 잡습니다</span>
+    <span class="r">02 / 14</span>
+  </div>
+</body>
+</html>
