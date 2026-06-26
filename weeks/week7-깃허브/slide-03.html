@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{width:720pt;height:405pt;font-family:'Inter','SF Pro',system-ui,-apple-system,sans-serif;background:#F8F8F2;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto 1fr 1fr auto;gap:10pt;padding:20pt;overflow:hidden}
+  .cell{border-radius:14pt;padding:15pt 19pt;overflow:hidden}
+  .head{grid-column:1/3;background:#1A1A2E;color:#F8F8F2;display:flex;align-items:center;justify-content:space-between;padding:14pt 22pt}
+  .head .num{font-size:9.5pt;font-weight:600;color:#E8FF3B;letter-spacing:0.15pt}
+  .head h2{font-size:20pt;font-weight:600;letter-spacing:-0.3pt}
+  .c{display:flex;flex-direction:column;justify-content:center;position:relative}
+  .c .ico{position:absolute;top:12pt;right:15pt;font-size:15pt}
+  .c .en{font-size:8pt;font-weight:800;letter-spacing:0.3pt;text-transform:uppercase;margin-bottom:5pt;opacity:0.7}
+  .c h3{font-size:17pt;font-weight:800;letter-spacing:-0.4pt;margin-bottom:6pt;line-height:1.1}
+  .c p{font-size:9.6pt;font-weight:500;line-height:1.45}
+  .c p b{font-weight:800}
+  .navy{background:#1A1A2E;color:#F8F8F2}
+  .navy .en{color:#E8FF3B;opacity:1}
+  .lime{background:#E8FF3B;color:#1A1A2E}
+  .teal{background:#4ECDC4;color:#1A1A2E}
+  .pink{background:#FF6B9D;color:#1A1A2E}
+  .foot{grid-column:1/3;background:#FFE66D;color:#1A1A2E;padding:11pt 22pt;border-radius:14pt;display:flex;align-items:center;gap:12pt}
+  .foot .tag{font-size:8.3pt;font-weight:800;background:#1A1A2E;color:#FFE66D;padding:5pt 11pt;border-radius:6pt;white-space:nowrap;flex-shrink:0;text-align:center;line-height:1.2}
+  .foot p{font-size:10pt;font-weight:600;line-height:1.4}
+  .foot p b{font-weight:800}
+</style>
+</head>
+<body>
+  <div class="cell head">
+    <h2>GitHub, 4가지만 알면 된다</h2>
+    <span class="num">03 / 9</span>
+  </div>
+
+  <div class="cell c navy">
+    <span class="ico">🌐</span>
+    <p class="en">Remote Repository</p>
+    <h3>원격 저장소</h3>
+    <p>인터넷에 있는 공용 저장소 — 내 PC의 그 폴더를 <b>그대로 올린 곳</b>. 모두가 본다</p>
+  </div>
+  <div class="cell c lime">
+    <span class="ico">📮</span>
+    <p class="en">Issue</p>
+    <h3>이슈 = 건의함</h3>
+    <p>"여기 이상해요"라고 <b>알리기</b>. 계정만 있으면 누구나 남길 수 있다</p>
+  </div>
+  <div class="cell c teal">
+    <span class="ico">✏️</span>
+    <p class="en">Pull Request</p>
+    <h3>PR = 수정 제안서</h3>
+    <p>"이렇게 <b>고쳤어요</b>, 받아줄래요?" 내가 만든 수정안을 제출</p>
+  </div>
+  <div class="cell c pink">
+    <span class="ico">✅</span>
+    <p class="en">Merge</p>
+    <h3>머지 = 채택</h3>
+    <p>제안을 <b>진짜 저장소에 합치기</b>. 저장소 주인이 보고 결정</p>
+  </div>
+
+  <div class="cell foot">
+    <span class="tag">오늘의<br>한 바퀴</span>
+    <p>이슈로 <b>알리고</b> → PR로 <b>고쳐 보내고</b> → 머지로 <b>채택</b>. 이 한 바퀴를 직접 돌아본다</p>
+  </div>
+</body>
+</html>

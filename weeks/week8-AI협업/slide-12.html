@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{width:720pt;height:405pt;font-family:'Inter','SF Pro',system-ui,-apple-system,sans-serif;background:#F8F8F2;display:grid;grid-template-columns:1.3fr 1fr;grid-template-rows:auto 1fr auto;gap:10pt;padding:20pt;overflow:hidden}
+  .cell{border-radius:14pt;padding:16pt 20pt;overflow:hidden}
+  .head{grid-column:1/3;background:#1A1A2E;color:#F8F8F2;display:flex;align-items:center;justify-content:space-between;padding:13pt 22pt}
+  .head h2{font-size:19pt;font-weight:600;letter-spacing:-0.3pt}
+  .head .num{font-size:9.5pt;font-weight:600;color:#E8FF3B;letter-spacing:0.15pt}
+  .timeline{background:#1A1A2E;color:#F8F8F2;display:flex;flex-direction:column;justify-content:center;gap:8pt}
+  .timeline .lab{font-size:8.5pt;font-weight:800;text-transform:uppercase;letter-spacing:0.2pt;color:#E8FF3B;margin-bottom:3pt}
+  .step{display:flex;align-items:center;gap:9pt}
+  .step .dot{width:17pt;height:17pt;border-radius:50%;background:#E8FF3B;color:#1A1A2E;font-size:9pt;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .step.cx .dot{background:#FF6B9D}
+  .step .t{font-size:9.7pt;font-weight:600;line-height:1.2}
+  .step .t b{color:#E8FF3B}
+  .step.cx .t b{color:#FF6B9D}
+  .step .h{font-size:7.5pt;font-family:'SF Mono',Menlo,monospace;color:#A0A0B0;margin-left:auto;flex-shrink:0}
+  .codexbox{background:#4ECDC4;color:#1A1A2E;display:flex;flex-direction:column;justify-content:center;gap:7pt}
+  .codexbox .ct{font-size:9.5pt;font-weight:800;display:flex;align-items:center;gap:5pt}
+  .codexbox .row{background:rgba(26,26,46,0.10);border-radius:8pt;padding:7pt 9pt;font-size:8.7pt;font-weight:600;line-height:1.3}
+  .codexbox .row .p0{color:#A32D2D;font-weight:800}
+  .codexbox .row .p1{color:#854F0B;font-weight:800}
+  .codexbox .res{font-size:8.7pt;font-weight:800;margin-top:1pt}
+  .foot{grid-column:1/3;background:#FFE66D;color:#1A1A2E;font-size:10.3pt;font-weight:600;padding:11pt 22pt;border-radius:14pt;display:flex;align-items:center;gap:10pt}
+  .foot b{font-weight:800}
+</style>
+</head>
+<body>
+  <div class="cell head">
+    <h2>협업의 이력 — git log가 곧 메이킹 기록</h2>
+    <span class="num">12 / 14</span>
+  </div>
+  <div class="cell timeline">
+    <p class="lab">PR #2 · 단계마다 커밋</p>
+    <div class="step"><span class="dot">1</span><span class="t">강의 <b>outline</b> 추가</span><span class="h">f7eeb42</span></div>
+    <div class="step"><span class="dot">2</span><span class="t">메커니즘 확정 + <b>AGENTS.md</b></span><span class="h">01b6470</span></div>
+    <div class="step"><span class="dot">3</span><span class="t">클로드가 <b>wrap-up 초안</b> 제작</span><span class="h">971f2d8</span></div>
+    <div class="step cx"><span class="dot">4</span><span class="t">코덱스가 <b>PR 자동 검수</b></span><span class="h">@codex</span></div>
+    <div class="step"><span class="dot">5</span><span class="t">클로드가 <b>P0 반영</b></span><span class="h">7c14acf</span></div>
+  </div>
+  <div class="cell codexbox">
+    <p class="ct">🔍 코덱스 리뷰 (PR #2)</p>
+    <div class="row"><span class="p0">P0</span> slide-02 '8주 복습' → '지난 7주' (숫자 오류)</div>
+    <div class="row"><span class="p1">P1</span> 14장 선언인데 9장 — Part2 누락</div>
+    <p class="res">→ 클로드가 반영 · Part2 추가</p>
+  </div>
+  <div class="cell foot"><span>각 단계가 <b>실제 커밋</b> — 누가 언제 뭘 했는지 그대로 남는다 <b>(week5·7 이력의 진짜 쓸모)</b></span></div>
+</body>
+</html>

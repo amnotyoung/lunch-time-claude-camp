@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{width:720pt;height:405pt;font-family:'Inter','SF Pro',system-ui,-apple-system,sans-serif;background:#000000;color:#F8F8F2;display:grid;grid-template-columns:1.5fr 1fr;grid-template-rows:auto 1fr auto;gap:10pt;padding:20pt;overflow:hidden}
+  .cell{border-radius:14pt;padding:20pt 24pt;overflow:hidden}
+  .head{grid-column:1/3;background:#1A1A2E;color:#F8F8F2;display:flex;align-items:center;justify-content:space-between;padding:14pt 22pt}
+  .head .num{font-size:9.5pt;font-weight:600;color:#E8FF3B;letter-spacing:0.15pt}
+  .head h2{font-size:20pt;font-weight:600;letter-spacing:-0.3pt}
+  .anchor{background:#0F0F1A;color:#F8F8F2;display:flex;flex-direction:column;justify-content:space-between}
+  .anchor .lab{font-size:10pt;letter-spacing:0.15pt;text-transform:uppercase;font-weight:700;color:#E8FF3B;margin-bottom:10pt}
+  .anchor h3{font-size:22pt;font-weight:700;letter-spacing:-0.5pt;line-height:1.18;margin-bottom:10pt}
+  .steps{display:flex;flex-wrap:wrap;gap:6pt;margin-bottom:10pt}
+  .steps .s{font-size:9.5pt;font-weight:700;background:#1A1A2E;padding:5pt 10pt;border-radius:7pt;color:#F8F8F2}
+  .steps .s b{color:#E8FF3B}
+  .anchor .why{font-size:11pt;color:#F8F8F2;line-height:1.5;padding:11pt 13pt;background:#1A1A2E;border-radius:10pt;border-left:3pt solid #E8FF3B}
+  .anchor .why b{color:#E8FF3B;font-weight:700}
+  .next{background:#E8FF3B;color:#1A1A2E;display:flex;flex-direction:column;justify-content:space-between;padding:24pt 26pt}
+  .next .week{font-size:10pt;letter-spacing:0.2pt;text-transform:uppercase;font-weight:700;opacity:0.7;margin-bottom:8pt}
+  .next h4{font-size:30pt;font-weight:800;letter-spacing:-0.6pt;line-height:1.08;margin-bottom:12pt}
+  .next .desc{font-size:11.5pt;line-height:1.45;font-weight:500}
+  .next .desc b{font-weight:700}
+  .next .tag{display:inline-block;background:#1A1A2E;color:#E8FF3B;font-size:9pt;font-weight:700;padding:4pt 10pt;border-radius:6pt;margin-top:12pt;letter-spacing:0.1pt}
+  .reassure{grid-column:1/3;background:#4ECDC4;color:#1A1A2E;border-radius:14pt;padding:11pt 22pt;display:flex;align-items:center;gap:12pt}
+  .reassure .ic{font-size:14pt;flex-shrink:0}
+  .reassure p{font-size:10.5pt;font-weight:500;line-height:1.45}
+  .reassure p b{font-weight:800}
+</style>
+</head>
+<body>
+  <div class="cell head">
+    <h2>오늘 가져갈 것 — 함께 일하는 감각</h2>
+    <span class="num">09 / 9</span>
+  </div>
+
+  <div class="cell anchor">
+    <div>
+      <p class="lab">Today</p>
+      <h3>한 바퀴<br>돌아봤다 ✓</h3>
+    </div>
+    <div class="steps">
+      <span class="s"><b>①</b> 직접 찾기</span>
+      <span class="s"><b>②</b> 이슈 + PR 한 번에</span>
+      <span class="s"><b>③</b> 리뷰·머지</span>
+    </div>
+    <div class="why">
+      로컬(<b>혼자</b> 커밋)에서 GitHub(<b>함께</b> 머지)로 — 식별은 사람이, 처리·리뷰는 AI가. 변경이 <b>제안 → 검토 → 채택</b>을 거치는 게 협업.
+    </div>
+  </div>
+
+  <div class="cell next">
+    <div>
+      <p class="week">다음 주차 · 8주차 · 6월29일주</p>
+      <h4>역할 반전</h4>
+      <p class="desc">이번엔 <b>내가 repo 주인</b>. 이슈를 내는 건 사람이 아니라 <b>AI(Claude·Codex·Gemini)</b>.</p>
+    </div>
+    <span class="tag">받는 쪽 → 운영하는 쪽</span>
+  </div>
+
+  <div class="cell reassure">
+    <span class="ic">🌱</span>
+    <p>오늘은 <b>올리고·알리고·합치는</b> 감각 하나면 충분 — 나머지는 차차 <b>learning by doing</b>, 직접 해보며 익히면 된다.</p>
+  </div>
+</body>
+</html>

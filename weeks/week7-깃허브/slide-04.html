@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{width:720pt;height:405pt;font-family:'Inter','SF Pro',system-ui,-apple-system,sans-serif;background:#F8F8F2;display:grid;grid-template-columns:1fr;grid-template-rows:auto 1fr auto;gap:10pt;padding:20pt;overflow:hidden}
+  .cell{border-radius:14pt;overflow:hidden}
+  .head{background:#1A1A2E;color:#F8F8F2;display:flex;align-items:center;justify-content:space-between;padding:14pt 22pt}
+  .head .num{font-size:9.5pt;font-weight:600;color:#E8FF3B;letter-spacing:0.15pt}
+  .head h2{font-size:20pt;font-weight:600;letter-spacing:-0.3pt}
+  .flow{background:#0F0F1A;color:#F8F8F2;display:flex;align-items:center;justify-content:center;gap:7pt;padding:16pt 12pt;flex-wrap:nowrap}
+  .node{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;border-radius:10pt;padding:11pt 9pt;width:96pt;flex-shrink:0}
+  .node .t{font-size:7.5pt;font-weight:800;text-transform:uppercase;letter-spacing:0.15pt;opacity:0.7;margin-bottom:4pt}
+  .node .l{font-size:11pt;font-weight:800;line-height:1.15}
+  .node small{font-size:7.6pt;font-weight:600;opacity:0.72;margin-top:3pt;display:block;line-height:1.25}
+  .repo{background:#1A1A2E;color:#F8F8F2;border:1.5pt solid #4ECDC4}
+  .repo .t{color:#4ECDC4;opacity:1}
+  .s1{background:#E8FF3B;color:#1A1A2E}
+  .s2{background:#4ECDC4;color:#1A1A2E}
+  .s4{background:#FF6B9D;color:#1A1A2E}
+  .done{background:#1A1A2E;color:#E8FF3B;border:1.5pt solid #E8FF3B}
+  .done .t{color:#E8FF3B;opacity:1}
+  .ar{font-size:13pt;font-weight:800;color:#6A6A7A;flex-shrink:0}
+  .foot{background:#FFE66D;color:#1A1A2E;padding:11pt 22pt;display:flex;align-items:center;gap:13pt}
+  .foot .tag{font-size:8.3pt;font-weight:800;background:#1A1A2E;color:#FFE66D;padding:5pt 11pt;border-radius:6pt;white-space:nowrap;flex-shrink:0;text-align:center;line-height:1.2}
+  .foot p{font-size:9.7pt;font-weight:600;line-height:1.4}
+  .foot p b{font-weight:800}
+  .foot .who{font-weight:800;background:rgba(26,26,46,0.1);padding:1pt 6pt;border-radius:4pt}
+</style>
+</head>
+<body>
+  <div class="cell head">
+    <h2>오늘의 미션 — 한 바퀴</h2>
+    <span class="num">04 / 9</span>
+  </div>
+
+  <div class="cell flow">
+    <div class="node repo"><span class="t">강사 공개 repo</span><span class="l">koica-intro</span><small>문제가 숨어있다</small></div>
+    <span class="ar">→</span>
+    <div class="node s1"><span class="t">동료 ①</span><span class="l">직접 찾기</span><small>내 눈으로 발견</small></div>
+    <span class="ar">→</span>
+    <div class="node s2"><span class="t">동료 ②</span><span class="l">이슈 + PR</span><small>한 번에 (AI가)</small></div>
+    <span class="ar">→</span>
+    <div class="node s4"><span class="t">강사 ③</span><span class="l">리뷰·머지</span><small>AI 도움 받아</small></div>
+    <span class="ar">→</span>
+    <div class="node done"><span class="t">결과</span><span class="l">반영 ✓</span><small>내 수정이 올라감</small></div>
+  </div>
+
+  <div class="cell foot">
+    <span class="tag">지지난주 → 오늘</span>
+    <p>혼자 <b>커밋</b>하던 게 → 함께 <b>머지</b>로. <span class="who">①② 동료</span> 직접 찾고·AI로 제안 · <span class="who">③ 강사</span> 리뷰·채택</p>
+  </div>
+</body>
+</html>

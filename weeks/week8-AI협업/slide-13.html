@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{width:720pt;height:405pt;font-family:'Inter','SF Pro',system-ui,-apple-system,sans-serif;background:#F8F8F2;display:grid;grid-template-columns:1fr;grid-template-rows:auto 1fr auto 1fr auto;gap:9pt;padding:18pt 20pt;overflow:hidden}
+  .cell{border-radius:13pt;overflow:hidden}
+  .head{background:#1A1A2E;color:#F8F8F2;display:flex;align-items:center;justify-content:space-between;padding:12pt 22pt}
+  .head h2{font-size:18pt;font-weight:600;letter-spacing:-0.3pt}
+  .head .num{font-size:9.5pt;font-weight:600;color:#E8FF3B;letter-spacing:0.15pt}
+  .cx{background:#FFFFFF;border:1.5pt solid #4ECDC4;padding:12pt 18pt;display:flex;align-items:center;gap:11pt}
+  .cx .rd{font-size:8pt;font-weight:800;background:#4ECDC4;color:#1A1A2E;padding:3pt 9pt;border-radius:6pt;flex-shrink:0;letter-spacing:0.2pt}
+  .cx .who{font-size:9.5pt;font-weight:800;font-family:'SF Mono',Menlo,monospace;color:#1A1A2E;flex-shrink:0}
+  .cx .p0{font-size:7.5pt;font-weight:800;background:#A32D2D;color:#fff;padding:2pt 7pt;border-radius:5pt;flex-shrink:0;letter-spacing:0.3pt}
+  .cx .msg{font-size:10.5pt;font-weight:500;line-height:1.45;color:#1A1A2E}
+  .cx .msg b{font-weight:800;color:#A32D2D}
+  .fix{background:#272729;color:#F8F8F2;padding:9pt 18pt;display:flex;align-items:center;gap:10pt;font-size:9.7pt;font-weight:600}
+  .fix .ar{color:#E8FF3B;font-weight:800;font-size:12pt}
+  .fix code{font-family:'SF Mono',Menlo,monospace;color:#E8FF3B;font-size:8.5pt;background:#1A1A2E;padding:1pt 6pt;border-radius:4pt}
+  .foot{background:#E8FF3B;color:#1A1A2E;padding:11pt 20pt;display:flex;align-items:center;gap:10pt;font-size:10.5pt;font-weight:600}
+  .foot .ic{font-size:13pt;flex-shrink:0}
+  .foot b{font-weight:800}
+</style>
+</head>
+<body>
+  <div class="cell head">
+    <h2>라이브 — 주고받는 교차검증</h2>
+    <span class="num">13 / 14</span>
+  </div>
+  <div class="cell cx">
+    <span class="rd">1차</span>
+    <span class="who">codex</span>
+    <span class="p0">P0</span>
+    <span class="msg">slide-02 "<b>8주</b> 복습" — 제목·카운터는 7주인데 본문만 8주</span>
+  </div>
+  <div class="cell fix">
+    <span class="ar">↓</span>
+    <span>클로드: slide-02를 "지난 7주"로 고쳐 <code>push</code> (7c14acf)</span>
+  </div>
+  <div class="cell cx">
+    <span class="rd">2차</span>
+    <span class="who">codex</span>
+    <span class="p0">P0</span>
+    <span class="msg">slide-02는 고쳤지만 <b>outline엔 "8주"가 그대로</b> — 끝까지 맞춰야</span>
+  </div>
+  <div class="cell foot">
+    <span class="ic">👁️</span>
+    <span>단발이 아니라 <b>주고받기</b> — 슬라이드만 고친 걸 코덱스가 <b>설계 문서까지</b> 추적</span>
+  </div>
+</body>
+</html>

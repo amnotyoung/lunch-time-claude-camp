@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{width:720pt;height:405pt;font-family:'Inter','SF Pro',system-ui,-apple-system,sans-serif;background:#F8F8F2;display:grid;grid-template-columns:1.05fr 1fr;grid-template-rows:auto 1fr auto;gap:10pt;padding:20pt;overflow:hidden}
+  .cell{border-radius:14pt;padding:16pt 18pt;overflow:hidden}
+  .head{grid-column:1/3;background:#1A1A2E;color:#F8F8F2;display:flex;align-items:center;justify-content:space-between;padding:14pt 22pt}
+  .head .num{font-size:9.5pt;font-weight:600;color:#E8FF3B;letter-spacing:0.15pt}
+  .head h2{font-size:20pt;font-weight:600;letter-spacing:-0.3pt}
+  .read{background:#0F0F1A;color:#F8F8F2;display:flex;flex-direction:column;justify-content:center}
+  .read .lab{font-size:8.5pt;letter-spacing:0.2pt;text-transform:uppercase;font-weight:800;color:#E8FF3B;margin-bottom:11pt}
+  .read h3{font-size:18pt;font-weight:800;letter-spacing:-0.5pt;line-height:1.15;margin-bottom:12pt}
+  .read .url{font-family:'SF Mono','Menlo',monospace;font-size:9.3pt;font-weight:600;color:#4ECDC4;background:#1A1A2E;border:1pt solid #2A2A3E;border-radius:7pt;padding:9pt 11pt;margin-bottom:12pt;word-break:break-all}
+  .read .msg{font-size:9.5pt;color:#C8C8D0;line-height:1.5;font-weight:500}
+  .read .msg b{color:#E8FF3B;font-weight:800}
+  .side{background:#E8FF3B;color:#1A1A2E;display:flex;flex-direction:column;justify-content:center}
+  .side .st{font-size:8.3pt;font-weight:800;text-transform:uppercase;letter-spacing:0.2pt;margin-bottom:10pt;opacity:0.6}
+  .side ul{list-style:none;display:flex;flex-direction:column;gap:8pt}
+  .side li{font-size:9.7pt;font-weight:600;line-height:1.3;display:flex;align-items:center}
+  .side li .k{font-size:8pt;font-weight:800;background:#1A1A2E;color:#E8FF3B;padding:3pt 0;border-radius:5pt;margin-right:9pt;display:inline-block;width:42pt;text-align:center;flex-shrink:0}
+  .foot{grid-column:1/3;background:#1A1A2E;color:#F8F8F2;padding:11pt 22pt;border-radius:14pt;display:flex;align-items:center;gap:12pt}
+  .foot .tag{font-size:8.3pt;font-weight:800;background:#E8FF3B;color:#1A1A2E;padding:5pt 11pt;border-radius:6pt;white-space:nowrap;flex-shrink:0;text-align:center;line-height:1.2}
+  .foot p{font-size:9.7pt;font-weight:500;line-height:1.4}
+  .foot p b{font-weight:800;color:#E8FF3B}
+</style>
+</head>
+<body>
+  <div class="cell head">
+    <h2>1단계 — 직접 찾기 (내 눈으로)</h2>
+    <span class="num">06 / 9</span>
+  </div>
+
+  <div class="cell read">
+    <p class="lab">AI에게 안 맡긴다 · 사람이 찾는다</p>
+    <h3>강사 repo를 열어<br>직접 읽어본다</h3>
+    <div class="url">github.com/amnotyoung/koica-intro</div>
+    <p class="msg">이상함을 <b>알아채는 건 사람의 몫</b> — KOICA 동료라서 보이는 것들이다. "찾아줘"가 아니라 내가 읽는다</p>
+  </div>
+
+  <div class="cell side">
+    <p class="st">이런 '결'이 보이면 잡자</p>
+    <ul>
+      <li><span class="k">사실</span> 설립연도·소속·본사</li>
+      <li><span class="k">표현</span> 어색하거나 부적절한 말</li>
+      <li><span class="k">오타</span> 한글·영문 철자</li>
+      <li><span class="k">데이터</span> 숫자·합계가 안 맞음</li>
+      <li><span class="k">형식</span> 깨진 링크·줄바꿈</li>
+    </ul>
+  </div>
+
+  <div class="cell foot">
+    <span class="tag">13곳이<br>숨어있다</span>
+    <p>하나만 잡아도 좋다 — 단 <b>많이 잡을수록 더 좋다</b>. 보이는 만큼 다 잡아보자</p>
+  </div>
+</body>
+</html>
