@@ -17,6 +17,8 @@ tools/
 # 빌드 산출물 / 대용량 (HTML 소스만 유지)
 *.pdf
 *.zip
+# 단, GitHub Pages 배포용 주차별 PDF는 포함
+!pdf/week*.pdf
 
 # 슬라이드 합본 뷰어 (빌드 산출물 — slide-*.html이 정본)
 **/viewer.html

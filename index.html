@@ -21,7 +21,10 @@
   .card .wk{font-size:46px;font-weight:700;letter-spacing:-2px;line-height:1;color:var(--y)}
   .card .date{font-size:11px;color:var(--muted);font-weight:600;letter-spacing:0.3px}
   .card .ttl{font-size:14px;font-weight:600;line-height:1.4;margin-top:auto}
+  .card .row{display:flex;align-items:center;justify-content:space-between;gap:8px}
   .card .cnt{font-size:11px;color:var(--t);font-weight:600}
+  .card .pdf{font-size:11px;font-weight:700;color:#1A1A2E;background:var(--y);padding:4px 10px;border-radius:9999px;text-decoration:none;white-space:nowrap}
+  .card .pdf:hover{filter:brightness(1.08)}
   .foot{margin-top:48px;font-size:13px;color:var(--muted);line-height:1.8;border-top:1px solid var(--line);padding-top:24px}
   .foot a{color:var(--t);text-decoration:none}
   .foot a:hover{text-decoration:underline}
@@ -40,7 +43,9 @@
   #vtitle{font-size:12px;color:var(--muted);max-width:280px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
   #close{position:fixed;top:14px;left:16px;font-size:13px;padding:6px 13px;background:#26262e;color:#e8e8ea;border:1px solid #3a3a44;border-radius:8px;cursor:pointer;font-weight:600;font-family:inherit}
   #fs{position:fixed;top:14px;left:120px;font-size:13px;padding:6px 13px;background:#26262e;color:#e8e8ea;border:1px solid #3a3a44;border-radius:8px;cursor:pointer;font-weight:600;font-family:inherit}
-  #hint{position:fixed;top:18px;right:18px;font-size:11px;color:#6a6a74;letter-spacing:.3px}
+  #dl{position:fixed;top:14px;right:18px;font-size:13px;padding:6px 13px;background:var(--y);color:#1A1A2E;border:0;border-radius:8px;cursor:pointer;font-weight:700;font-family:inherit;text-decoration:none}
+  #dl:hover{filter:brightness(1.08)}
+  #hint{position:fixed;top:50px;right:18px;font-size:11px;color:#6a6a74;letter-spacing:.3px}
   @media (max-width:560px){h1{font-size:30px}#hint{display:none}}
 </style>
 </head>
@@ -61,6 +66,7 @@
 <div id="viewer">
   <button id="close">← 목록</button>
   <button id="fs">⛶ 전체화면</button>
+  <a id="dl" href="#" download>⬇ PDF</a>
   <div id="hint">← → / Space 이동 · F 전체화면 · Esc 목록</div>
   <div id="stageWrap"><div id="stage"><iframe id="frame" title="슬라이드"></iframe></div></div>
   <div id="prog"></div>
@@ -87,13 +93,23 @@ const WEEKS = [
 // ---- build landing cards ----
 const grid = document.getElementById('grid');
 WEEKS.forEach(w => {
-  const c = document.createElement('button');
+  const c = document.createElement('div');
   c.className = 'card';
+  c.setAttribute('role', 'button');
+  c.tabIndex = 0;
   c.innerHTML = `<div class="wk">${w.n}</div><div class="date">${w.date}</div>`
-    + `<div class="ttl">${w.title}</div><div class="cnt">${w.count} slides ›</div>`;
+    + `<div class="ttl">${w.title}</div>`
+    + `<div class="row"><span class="cnt">${w.count} slides ›</span>`
+    + `<a class="pdf" href="${pdfHref(w)}" download="${pdfName(w)}" title="PDF 다운로드">⬇ PDF</a></div>`;
   c.onclick = () => open(w);
+  c.onkeydown = e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(w); } };
+  // PDF 링크는 카드 열기와 분리
+  c.querySelector('.pdf').addEventListener('click', e => e.stopPropagation());
   grid.appendChild(c);
 });
+
+function pdfHref(w){ return 'pdf/week' + w.n + '.pdf'; }
+function pdfName(w){ return '점심클로드캠프-week' + w.n + '-' + w.title.replace(/[\\/:*?"<>|]/g,'') + '.pdf'; }
 
 // ---- viewer ----
 const viewer  = document.getElementById('viewer');
@@ -103,6 +119,7 @@ const prog    = document.getElementById('prog');
 const vtitle  = document.getElementById('vtitle');
 const prevBtn = document.getElementById('prev');
 const nextBtn = document.getElementById('next');
+const dl      = document.getElementById('dl');
 let week = null, cur = 1;
 
 function pad(n){ return String(n).padStart(2,'0'); }
@@ -114,6 +131,8 @@ function load(){
   prevBtn.disabled = cur === 1;
   nextBtn.disabled = cur === week.count;
   vtitle.textContent = 'week' + week.n + ' · ' + week.title;
+  dl.href = pdfHref(week);
+  dl.setAttribute('download', pdfName(week));
   const u = new URL(location);
   u.hash = 'w' + week.n + '-' + cur;
   history.replaceState(null, '', u);
