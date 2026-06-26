@@ -38,3 +38,9 @@
 - **kordoc** — 한글 문서(HWPX) 처리 도구 · https://github.com/chrisryugj/kordoc
 - **slides-grab** — HTML 슬라이드 자동 제작·변환 (이 캠프 슬라이드 제작에 사용) · https://github.com/vkehfdl1/slides-grab
 - **koica-reg-mcp** — KOICA 규정 조회 MCP (3주차 실습) · https://github.com/amnotyoung/koica-reg-mcp
+
+## 라이선스
+
+[MIT License](LICENSE). 출처(저작권 고지)만 유지하면 누구나 자유롭게 수정·배포·상업적 이용할 수 있습니다.
+
+> 위 "캠프에서 사용한 외부 도구"는 이 저장소에 포함되지 않으며, 각자의 라이선스를 따릅니다.
