@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>점심시간 클로드 코드 캠프</title>
+<meta name="description" content="점심시간에 운영한 클로드 코드 학습 캠프 — 주차별 슬라이드 모음">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{--bg:#0e0e12;--panel:#1a1a2e;--ink:#F8F8F2;--muted:#8a8a94;--y:#E8FF3B;--t:#4ECDC4;--line:#2a2a36}
+  html,body{background:var(--bg);color:var(--ink);font-family:'Inter','SF Pro',system-ui,-apple-system,sans-serif}
+  a{color:inherit}
+  /* ---------- landing ---------- */
+  .wrap{max-width:1000px;margin:0 auto;padding:64px 24px 96px}
+  .badge{display:inline-block;background:var(--y);color:#1A1A2E;font-size:11px;font-weight:700;padding:5px 13px;border-radius:9999px;letter-spacing:0.3px}
+  h1{font-size:40px;font-weight:600;letter-spacing:-1px;line-height:1.15;margin:18px 0 14px}
+  .lead{font-size:15px;color:var(--muted);line-height:1.6;max-width:640px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin-top:40px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px;cursor:pointer;transition:transform .15s,border-color .15s;text-align:left;display:flex;flex-direction:column;gap:10px;min-height:150px}
+  .card:hover{transform:translateY(-3px);border-color:var(--t)}
+  .card .wk{font-size:46px;font-weight:700;letter-spacing:-2px;line-height:1;color:var(--y)}
+  .card .date{font-size:11px;color:var(--muted);font-weight:600;letter-spacing:0.3px}
+  .card .ttl{font-size:14px;font-weight:600;line-height:1.4;margin-top:auto}
+  .card .cnt{font-size:11px;color:var(--t);font-weight:600}
+  .foot{margin-top:48px;font-size:13px;color:var(--muted);line-height:1.8;border-top:1px solid var(--line);padding-top:24px}
+  .foot a{color:var(--t);text-decoration:none}
+  .foot a:hover{text-decoration:underline}
+  /* ---------- viewer overlay ---------- */
+  #viewer{position:fixed;inset:0;background:#0e0e12;display:none;z-index:50}
+  #viewer.on{display:block}
+  #stageWrap{height:100vh;display:flex;align-items:center;justify-content:center}
+  #stage{width:960px;height:540px;transform-origin:center;flex-shrink:0}
+  #frame{width:960px;height:540px;border:0;background:#F8F8F2;border-radius:10px;box-shadow:0 14px 50px rgba(0,0,0,.55)}
+  #prog{position:fixed;bottom:56px;left:0;height:3px;background:var(--y);width:0;transition:width .2s}
+  #bar{position:fixed;bottom:0;left:0;right:0;height:56px;display:flex;align-items:center;justify-content:center;gap:16px;background:rgba(14,14,18,.9);backdrop-filter:blur(8px)}
+  #bar button{background:#26262e;color:#e8e8ea;border:1px solid #3a3a44;border-radius:8px;padding:7px 16px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit}
+  #bar button:hover{background:#34343e}
+  #bar button:disabled{opacity:.35;cursor:default}
+  #counter{font-size:14px;font-weight:700;min-width:74px;text-align:center;letter-spacing:.5px}
+  #vtitle{font-size:12px;color:var(--muted);max-width:280px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  #close{position:fixed;top:14px;left:16px;font-size:13px;padding:6px 13px;background:#26262e;color:#e8e8ea;border:1px solid #3a3a44;border-radius:8px;cursor:pointer;font-weight:600;font-family:inherit}
+  #fs{position:fixed;top:14px;left:120px;font-size:13px;padding:6px 13px;background:#26262e;color:#e8e8ea;border:1px solid #3a3a44;border-radius:8px;cursor:pointer;font-weight:600;font-family:inherit}
+  #hint{position:fixed;top:18px;right:18px;font-size:11px;color:#6a6a74;letter-spacing:.3px}
+  @media (max-width:560px){h1{font-size:30px}#hint{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <span class="badge">LUNCH-TIME CLAUDE CODE CAMP</span>
+  <h1>점심시간 클로드 코드 캠프</h1>
+  <p class="lead">점심시간에 운영한 <strong>클로드 코드</strong> 학습 캠프 자료입니다. 비개발자 동료가 자연어로 클로드 코드를 다루며 매주 손에 잡히는 결과물을 만들어 갑니다. 아래 주차를 눌러 슬라이드를 넘겨보세요.</p>
+
+  <div class="grid" id="grid"></div>
+
+  <div class="foot">
+    소스 저장소 · <a href="https://github.com/amnotyoung/lunch-time-claude-camp">github.com/amnotyoung/lunch-time-claude-camp</a><br>
+    라이선스 · <a href="https://github.com/amnotyoung/lunch-time-claude-camp/blob/main/LICENSE">MIT</a> — 출처만 유지하면 자유롭게 수정·배포할 수 있습니다.
+  </div>
+</div>
+
+<div id="viewer">
+  <button id="close">← 목록</button>
+  <button id="fs">⛶ 전체화면</button>
+  <div id="hint">← → / Space 이동 · F 전체화면 · Esc 목록</div>
+  <div id="stageWrap"><div id="stage"><iframe id="frame" title="슬라이드"></iframe></div></div>
+  <div id="prog"></div>
+  <div id="bar">
+    <button id="prev">← 이전</button>
+    <span id="counter">01 / 01</span>
+    <button id="next">다음 →</button>
+    <span id="vtitle"></span>
+  </div>
+</div>
+
+<script>
+const WEEKS = [
+  {n:1, date:"4월 27일주", dir:"week1-클로드채팅vs코드", title:"클로드 채팅과 클로드 코드는 뭐가 다른가", count:9},
+  {n:2, date:"5월 4일주",  dir:"week2-환경구성",        title:"클로드 코드 사용 환경을 구성해보자", count:8},
+  {n:3, date:"5월 11일주", dir:"week3-외부도구연결",     title:"더 많은 도구를 연결해보자 (MCP)", count:10},
+  {n:4, date:"5월 25일주", dir:"week4-스킬만들기",       title:"나만의 스킬을 만들어보자 (ktm)", count:7},
+  {n:5, date:"6월 8일주",  dir:"week5-깃",              title:"깃(Git)이란 무엇인가", count:7},
+  {n:6, date:"6월 15일주", dir:"week6-에이전트팀",       title:"에이전트와 서브 에이전트", count:11},
+  {n:7, date:"6월 22일주", dir:"week7-깃허브",          title:"깃허브(GitHub)란 무엇인가", count:9},
+  {n:8, date:"6월 29일주", dir:"week8-AI협업",          title:"클로드와 챗지피티를 협업시켜보자", count:14},
+];
+
+// ---- build landing cards ----
+const grid = document.getElementById('grid');
+WEEKS.forEach(w => {
+  const c = document.createElement('button');
+  c.className = 'card';
+  c.innerHTML = `<div class="wk">${w.n}</div><div class="date">${w.date}</div>`
+    + `<div class="ttl">${w.title}</div><div class="cnt">${w.count} slides ›</div>`;
+  c.onclick = () => open(w);
+  grid.appendChild(c);
+});
+
+// ---- viewer ----
+const viewer  = document.getElementById('viewer');
+const frame   = document.getElementById('frame');
+const counter = document.getElementById('counter');
+const prog    = document.getElementById('prog');
+const vtitle  = document.getElementById('vtitle');
+const prevBtn = document.getElementById('prev');
+const nextBtn = document.getElementById('next');
+let week = null, cur = 1;
+
+function pad(n){ return String(n).padStart(2,'0'); }
+
+function load(){
+  frame.src = encodeURI('weeks/' + week.dir + '/slide-' + pad(cur) + '.html');
+  counter.textContent = pad(cur) + ' / ' + pad(week.count);
+  prog.style.width = (cur / week.count * 100) + '%';
+  prevBtn.disabled = cur === 1;
+  nextBtn.disabled = cur === week.count;
+  vtitle.textContent = 'week' + week.n + ' · ' + week.title;
+  const u = new URL(location);
+  u.hash = 'w' + week.n + '-' + cur;
+  history.replaceState(null, '', u);
+}
+function open(w, slide){
+  week = w; cur = slide || 1;
+  viewer.classList.add('on');
+  load(); fitStage();
+}
+function close(){
+  viewer.classList.remove('on');
+  frame.src = 'about:blank';
+  history.replaceState(null, '', location.pathname + location.search);
+}
+function go(d){
+  const t = cur + d;
+  if (t >= 1 && t <= week.count){ cur = t; load(); }
+}
+
+prevBtn.onclick = () => go(-1);
+nextBtn.onclick = () => go(1);
+document.getElementById('close').onclick = close;
+document.getElementById('fs').onclick = () => {
+  if (!document.fullscreenElement) viewer.requestFullscreen?.();
+  else document.exitFullscreen?.();
+};
+
+document.addEventListener('keydown', e => {
+  if (!viewer.classList.contains('on')) return;
+  if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown'){ e.preventDefault(); go(1); }
+  else if (e.key === 'ArrowLeft' || e.key === 'PageUp'){ e.preventDefault(); go(-1); }
+  else if (e.key === 'Home'){ cur = 1; load(); }
+  else if (e.key === 'End'){ cur = week.count; load(); }
+  else if (e.key === 'Escape' && !document.fullscreenElement){ close(); }
+  else if (e.key === 'f' || e.key === 'F'){ document.getElementById('fs').click(); }
+});
+
+// scale the fixed 960×540 stage to fit the window
+const stage = document.getElementById('stage');
+function fitStage(){
+  const pad = 48, barH = 70;
+  const sw = (window.innerWidth - pad) / 960;
+  const sh = (window.innerHeight - barH - pad) / 540;
+  stage.style.transform = 'scale(' + Math.min(sw, sh, 1.6) + ')';
+}
+window.addEventListener('resize', fitStage);
+
+// deep-link: #w8-3 opens week8 slide 3
+function fromHash(){
+  const m = (location.hash || '').match(/^#w(\d+)-(\d+)$/);
+  if (!m) return;
+  const w = WEEKS.find(x => x.n === +m[1]);
+  if (w){ const s = Math.min(Math.max(+m[2],1), w.count); open(w, s); }
+}
+fromHash();
+</script>
+</body>
+</html>
