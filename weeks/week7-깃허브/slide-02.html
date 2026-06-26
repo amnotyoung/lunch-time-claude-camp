@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{width:720pt;height:405pt;font-family:'Inter','SF Pro',system-ui,-apple-system,sans-serif;background:#F8F8F2;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto 1fr auto;gap:10pt;padding:20pt;overflow:hidden}
+  .cell{border-radius:14pt;padding:15pt 20pt;overflow:hidden}
+  .head{grid-column:1/3;background:#1A1A2E;color:#F8F8F2;display:flex;align-items:center;justify-content:space-between;padding:14pt 22pt}
+  .head .num{font-size:9.5pt;font-weight:600;color:#E8FF3B;letter-spacing:0.15pt}
+  .head h2{font-size:20pt;font-weight:600;letter-spacing:-0.3pt}
+  .hero{grid-column:1/3;background:#E8FF3B;color:#1A1A2E;display:flex;align-items:center;justify-content:center;padding:12pt;text-align:center}
+  .hero h1{font-size:29pt;font-weight:800;letter-spacing:-0.7pt}
+  .col{display:flex;flex-direction:column;justify-content:center;position:relative}
+  .col .badge{position:absolute;top:13pt;right:16pt;font-size:7.5pt;font-weight:800;letter-spacing:0.2pt;text-transform:uppercase;padding:3pt 8pt;border-radius:6pt}
+  .col .tag{font-size:8.5pt;font-weight:700;letter-spacing:0.25pt;text-transform:uppercase;margin-bottom:6pt}
+  .col h3{font-size:16pt;font-weight:800;letter-spacing:-0.4pt;margin-bottom:7pt;line-height:1.1}
+  .col p{font-size:9.7pt;font-weight:500;line-height:1.45}
+  .col p b{font-weight:800}
+  .col .meta{margin-top:8pt;font-size:9pt;font-weight:800;padding:4pt 9pt;border-radius:6pt;align-self:flex-start}
+  .dark{background:#1A1A2E;color:#F8F8F2}
+  .dark .tag{color:#E8FF3B}
+  .dark .badge{background:#A0A0B0;color:#1A1A2E}
+  .dark .meta{background:#E8FF3B;color:#1A1A2E}
+  .teal{background:#4ECDC4;color:#1A1A2E}
+  .teal .tag{opacity:0.65}
+  .teal .badge{background:#1A1A2E;color:#E8FF3B}
+  .teal .meta{background:#1A1A2E;color:#FFE66D}
+  .band{grid-column:1/3;background:#272729;color:#F8F8F2;font-size:9.3pt;font-weight:500;padding:11pt 22pt;border-radius:14pt;display:flex;align-items:center;gap:11pt;line-height:1.35}
+  .band .pill{font-size:8.5pt;font-weight:800;letter-spacing:0.2pt;text-transform:uppercase;padding:3pt 9pt;border-radius:6pt;white-space:nowrap;flex-shrink:0}
+  .band .t1{background:#A0A0B0;color:#1A1A2E}
+  .band .t2{background:#4ECDC4;color:#1A1A2E}
+  .band .seg{display:flex;align-items:center;gap:7pt}
+  .band .vs{opacity:0.4;font-weight:800}
+  .band b{color:#E8FF3B;font-weight:700}
+</style>
+</head>
+<body>
+  <div class="cell head">
+    <h2>지지난주 로컬 Git ↔ 오늘 GitHub</h2>
+    <span class="num">02 / 9</span>
+  </div>
+
+  <div class="cell hero">
+    <h1>혼자 저장에서 → 함께 협업으로</h1>
+  </div>
+
+  <div class="cell col dark">
+    <span class="badge">지지난주</span>
+    <p class="tag">내 컴퓨터 · 나 혼자</p>
+    <h3>저장하고 되돌린다</h3>
+    <p><b>commit</b>(저장)·<b>이력</b>·되돌리기·브랜치 — 내 작업의 시간여행. 아무도 안 본다, 나만의 기록</p>
+    <span class="meta">→ "내가 언제 뭘 바꿨지?"</span>
+  </div>
+  <div class="cell col teal">
+    <span class="badge">오늘</span>
+    <p class="tag">인터넷 · 여럿이</p>
+    <h3>공유하고 합친다</h3>
+    <p>인터넷에 올리고 <b>이슈·PR·리뷰·머지</b> — 여러 사람이 제안하고 검토해 하나로 합친다</p>
+    <span class="meta">→ "누가 뭘 제안했고, 합칠까?"</span>
+  </div>
+
+  <div class="cell band">
+    <span class="pill t1">로컬 = 시간</span>
+    <span class="seg">내 작업을 시간순으로 저장·되돌리기 <b>(혼자)</b></span>
+    <span class="vs">↔</span>
+    <span class="pill t2">GitHub = 사람</span>
+    <span class="seg">여러 사람의 작업을 공유·검토·합치기 <b>(함께)</b></span>
+  </div>
+</body>
+</html>

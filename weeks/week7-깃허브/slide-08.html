@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{width:720pt;height:405pt;font-family:'Inter','SF Pro',system-ui,-apple-system,sans-serif;background:#F8F8F2;display:grid;grid-template-columns:1.05fr 1fr;grid-template-rows:auto 1fr auto;gap:10pt;padding:20pt;overflow:hidden}
+  .cell{border-radius:14pt;padding:16pt 18pt;overflow:hidden}
+  .head{grid-column:1/3;background:#1A1A2E;color:#F8F8F2;display:flex;align-items:center;justify-content:space-between;padding:14pt 22pt}
+  .head .num{font-size:9.5pt;font-weight:600;color:#E8FF3B;letter-spacing:0.15pt}
+  .head h2{font-size:20pt;font-weight:600;letter-spacing:-0.3pt}
+  .inbox{background:#0F0F1A;color:#F8F8F2;display:flex;flex-direction:column;justify-content:center;gap:7pt}
+  .inbox .lab{font-size:8.3pt;font-weight:800;text-transform:uppercase;color:#E8FF3B;letter-spacing:0.2pt;margin-bottom:3pt}
+  .it{background:#1A1A2E;border-radius:8pt;padding:8pt 11pt;display:flex;align-items:center;gap:8pt}
+  .it .bdg{font-size:7pt;font-weight:800;padding:2pt 6pt;border-radius:4pt;flex-shrink:0;letter-spacing:0.2pt}
+  .bi{background:#E8FF3B;color:#1A1A2E}
+  .bp{background:#4ECDC4;color:#1A1A2E}
+  .it .tt{font-size:9.2pt;font-weight:700;color:#F8F8F2;line-height:1.2;flex:1}
+  .it .au{font-size:7.7pt;font-weight:700;color:#A0A0B0;flex-shrink:0}
+  .act{background:#FF6B9D;color:#1A1A2E;display:flex;flex-direction:column;justify-content:center}
+  .act .st{font-size:8.3pt;font-weight:800;text-transform:uppercase;letter-spacing:0.2pt;margin-bottom:11pt;opacity:0.65}
+  .act ol{list-style:none;display:flex;flex-direction:column;gap:10pt}
+  .act li{font-size:9.7pt;font-weight:700;display:flex;gap:8pt;align-items:flex-start;line-height:1.25}
+  .act li .n{font-size:8.5pt;font-weight:800;background:#1A1A2E;color:#FF6B9D;width:16pt;height:16pt;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:0.5pt}
+  .act li small{display:block;font-size:8pt;font-weight:500;opacity:0.7;margin-top:1pt}
+  .foot{grid-column:1/3;background:#FFE66D;color:#1A1A2E;padding:11pt 22pt;border-radius:14pt;display:flex;align-items:center;gap:12pt}
+  .foot .tag{font-size:8.3pt;font-weight:800;background:#1A1A2E;color:#FFE66D;padding:5pt 11pt;border-radius:6pt;white-space:nowrap;flex-shrink:0;text-align:center;line-height:1.2}
+  .foot p{font-size:9.7pt;font-weight:600;line-height:1.4}
+  .foot p b{font-weight:800}
+</style>
+</head>
+<body>
+  <div class="cell head">
+    <h2>강사의 화면 — 리뷰까지 AI가</h2>
+    <span class="num">08 / 9</span>
+  </div>
+
+  <div class="cell inbox">
+    <p class="lab">강사 repo에 쌓이는 것 (이슈 + PR)</p>
+    <div class="it"><span class="bdg bi">ISSUE</span><span class="tt">설립연도 1995 → 1991</span><span class="au">@동료A</span></div>
+    <div class="it"><span class="bdg bp">PR</span><span class="tt">'후진국' → '개발도상국' 수정</span><span class="au">@동료B</span></div>
+    <div class="it"><span class="bdg bp">PR</span><span class="tt">합계 37000 → 38000 수정</span><span class="au">@동료C</span></div>
+  </div>
+
+  <div class="cell act">
+    <p class="st">강사가 하는 일</p>
+    <ol>
+      <li><span class="n">1</span><span>누가 무엇을 냈나<small>작성자·시각이 자동 기록</small></span></li>
+      <li><span class="n">2</span><span>"이 PR 리뷰해줘"<small>AI가 변경 요약·문제점·머지 가능 여부</small></span></li>
+      <li><span class="n">3</span><span>좋으면 Merge<small>원본에 실제 반영 ✓</small></span></li>
+    </ol>
+  </div>
+
+  <div class="cell foot">
+    <span class="tag">예전엔<br>가장 어려웠다</span>
+    <p>PR 리뷰 = 코드를 꼼꼼히 읽고 신중히 판단하는 일이었다. <b>이제 그것조차 AI가 도와준다</b> — 강사도 혼자 다 안 읽는다</p>
+  </div>
+</body>
+</html>

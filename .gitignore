@@ -30,3 +30,9 @@ weeks/*/PLAN.md
 weeks/week1-클로드채팅vs코드/수정가이드라인.md
 weeks/week3-외부도구연결/koica-text-mining/
 .claude/skills/ktm/outputs/
+
+# 정답노트 (비공개 — 강사 검수용, 절대 공개 금지)
+**/정답노트.md
+
+# week7 실습 repo 소스 (별도 공개 repo koica-intro로 관리)
+weeks/week7-깃허브/실습-repo/
